@@ -1,0 +1,30 @@
+{
+  "name": "60081-pink",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Обучающий проект «Пинк» от HTML Academy",
+  "author": "Сергей Жуков",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/up-htmlacademy/60081-pink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/up-htmlacademy/60081-pink/issues"
+  },
+  "homepage": "https://github.com/up-htmlacademy/60081-pink",
+  "dependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-copy": "0.8.x",
+    "grunt-lintspaces": "0.7.x",
+    "load-grunt-tasks": "3.3.x"
+  },
+  "scripts": {
+    "pregosha": "npm install > /dev/null",
+    "gosha": "grunt gosha",
+    "test": "grunt lintspaces:codestyle"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  }
+}
