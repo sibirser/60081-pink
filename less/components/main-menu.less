@@ -1,0 +1,37 @@
+/*Main-menu*/
+
+.main-menu {
+  position:  relative;
+
+  &__list {
+    position: absolute;
+    right:     -20px;
+    top:       51px;
+    z-index:   50;
+
+    margin:      0;
+    padding:     0;
+    list-style:  none;
+  }
+
+  &__link {
+    display:              none;
+    min-height:           64px;
+    width:                @layout--xs;
+    padding:              15px 20px;
+    border-top:           1px @menu-border-type;
+    border-bottom:        1px @menu-border-type;
+    border-top-color:     @menu-border-color1;
+    border-bottom-color:  @menu-border-color2;
+
+    font-family:          @font-family--bold;
+    font-size:            @text-size-2;
+    font-weight:          bold;
+    text-transform:       uppercase;
+    text-align:           center;
+    text-decoration:      none;
+    color:                @menu-link-color;
+
+    background-color:     @menu-color;
+  }
+}

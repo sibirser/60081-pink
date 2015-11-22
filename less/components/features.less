@@ -1,0 +1,44 @@
+/*Features*/
+
+.features {
+  position:          relative;
+
+  padding-top:       15px;
+  padding-bottom:    285px;
+
+  background-color:  @features-bg;
+
+  &:before {
+    position:  absolute;
+    top:       -100px;
+    content:  '';
+    display:   block;
+    width:     100%;
+    height:    100px;
+
+    background-image:  linear-gradient(to left top, @features-bg 50%, transparent 50%);
+  }
+
+  &__center-wrap {
+    width:            @layout--xs;
+    padding:          @padding--xs;
+    margin:           @center;
+  }
+
+  &__title {
+    margin-top:     0;
+    margin-bottom:  12px;
+
+    font-family:    @font-family--bold;
+    line-height:    @line-height-text2;
+    font-weight:    bold;
+    color:          @headings-color--black;
+    text-align:     center;
+  }
+
+  &__descr {
+    margin-bottom:  32px;
+
+    text-align:     center;
+  }
+}
