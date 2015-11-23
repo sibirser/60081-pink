@@ -35,12 +35,32 @@
       ~ .slider__slide {
         transform:  translateX(0);
       }
+
+      ~ .slider__label:nth-of-type(1) {
+        bottom:             93px;
+
+        width:              12px;
+        height:             12px;
+
+        background-color:   transparent;
+        border:             3px solid @control-color--active;
+      }
     }
 
     &[value$="2"]:checked {
 
       ~ .slider__slide {
         transform:  translateX(-320px);
+
+      ~ .slider__label:nth-of-type(2) {
+        bottom:             93px;
+
+        width:              12px;
+        height:             12px;
+
+        background-color:   transparent;
+        border:             3px solid @control-color--active;
+      }
       }
     }
 
@@ -48,23 +68,26 @@
 
       ~ .slider__slide {
         transform:  translateX(-640px);
+
+      ~ .slider__label:nth-of-type(3) {
+        bottom:             93px;
+
+        width:              12px;
+        height:             12px;
+
+        background-color:   transparent;
+        border:             3px solid @control-color--active;
+      }
       }
     }
   }
 
-  &__control {
-    position:         absolute;
-    left:             50%;
-    bottom:           96px;
-
-    display:          flex;
-    justify-content:  space-between;
-    align-items:      center;
-    width:            60px;
-    margin-left:      -32px;
-  }
-
   &__label {
+    position:         absolute;
+    bottom:           96px;
+    left:             50%;
+
+    display:  block;
     width:    6px;
     height:   6px;
 
@@ -74,12 +97,26 @@
 
     cursor:            pointer;
 
-    &--active {
-      width:              12px;
-      height:             12px;
-
-      background-color:   transparent;
-      border:             3px solid @control-color--active;
+    &:nth-of-type(1) {
+      margin-left:      -32px;
     }
+
+    &:nth-of-type(2) {
+      margin-left:      -3px;
+    }
+
+    &:nth-of-type(3) {
+      margin-left:      22px;
+    }
+
+    // &--active {
+    //   bottom: 93px;
+
+    //   width:              12px;
+    //   height:             12px;
+
+    //   background-color:   transparent;
+    //   border:             3px solid @control-color--active;
+    // }
   }
 }
