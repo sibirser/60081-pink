@@ -1,0 +1,31 @@
+/*Reviewer*/
+
+.reviewer {
+
+  &__title {
+    margin-bottom:  12px;
+    font-family:    @font-family--bold;
+    font-size:      @font-size--h3;
+    line-height:    @headings-line-height;
+    font-weight:    bold;
+    color:          #000;
+    text-align:     center;
+  }
+
+  &__descr {
+    line-height:  @line-height--big;
+    text-align:   center;
+  }
+
+  &__comment {
+    margin:  0;
+
+    &:before {
+      content:  open-quote;
+    }
+
+    &:after {
+      content:  close-quote;
+    }
+  }
+}

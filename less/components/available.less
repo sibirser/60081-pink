@@ -1,0 +1,59 @@
+/*Available*/
+
+.available {
+  display:    block;
+  width:      68px;
+  height:     59px;
+
+  font-size:  0;
+
+  &--yes {
+
+    &:before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 2px;
+
+      background-color: @check-color--yes;
+
+      transform: rotate(45deg) translate(9px, -0.5px)
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+
+      background-color: @check-color--yes;
+
+      transform: rotate(-45deg) translate(10px, 10px);
+    }
+  }
+
+  &--no {
+
+    &:before {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 2px;
+
+      background-color: @check-color--no;
+
+      transform: rotate(45deg) translate(2px, 0)
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 2px;
+
+      background-color: @check-color--no;
+
+      transform: rotate(-45deg) translate(2px, 0);
+    }
+  }
+}
