@@ -1,16 +1,17 @@
 /*Support*/
 
 .support-icon() {
-  display:           inline-block;
-  height:            60px;
-  width:             60px;
-  margin-right:      15px;
-  margin-bottom:     20px;
+  display:            inline-block;
+  height:             60px;
+  width:              60px;
+  margin-right:       15px;
+  margin-bottom:      20px;
 
-  font-size:         0;
-  vertical-align:    middle;
+  font-size:          0;
+  vertical-align:     middle;
 
-  background-image:  url(https://placeholdit.imgix.net/~text?txtsize=8&txt=60%C3%9760&w=60&h=60);
+  background-image:   url("@{img}/sprite-support.png");
+  background-repeat:  no-repeat;
 }
 
 .support {
@@ -18,15 +19,21 @@
   &__apple {
     .support-icon();
     margin-left:  30px;
+
+    background-position: 5px  0;
   }
 
   &__android {
     .support-icon();
+
+    background-position: -70px  0;
   }
 
   &__win {
     .support-icon();
     margin-right:  0;
+
+    background-position: -150px  0;
   }
 
   &__text {

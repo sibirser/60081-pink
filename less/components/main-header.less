@@ -1,7 +1,21 @@
 /*Main header*/
 
 .main-header {
-  margin-bottom:  42px;
+  margin-bottom:        42px;
 
-  background:     #2b3a4a  url() 0 0 no-repeat;
+  background-image:     url("@{img}/main-header-hand.png"),
+                        url("@{img}/main-header-hand--back.png"),
+                        url("@{img}/main-header-bg.png");
+
+  background-position:  44.3%  41%,
+                        50%  38.1%,
+                        50%  -37%;
+
+  background-size:      auto 43.5%,
+                        auto  28%,
+                        auto  75%;
+
+  background-repeat:    no-repeat;
+
+  background-color:     #2b3a4a;
 }
