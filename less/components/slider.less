@@ -5,25 +5,25 @@
 
   min-height:   380px;
 
-  // overflow:     hidden;
+  overflow:     hidden;
 
   &__slide {
-    position:  absolute;
+    position:     absolute;
 
-    width: 280px;
+    width:        280px;
 
-    transition: all .3s .2s ease-in-out;
+    transition:   all  .3s  .2s  ease-in-out;
 
     &:nth-of-type(1) {
-      left: 0;
+      left:  0;
     }
 
     &:nth-of-type(2) {
-      left: 320px;
+      left:  320px;
     }
 
     &:nth-of-type(3) {
-      left: 640px;
+      left:  640px;
     }
   }
 
@@ -87,7 +87,7 @@
     &[value$="4"]:checked {
 
       ~ .slider__slide {
-        transform:  translateX(0);
+        transform:  translateX(20px);
       }
 
       ~ .slider__label:nth-of-type(1) {
@@ -105,7 +105,7 @@
     &[value$="5"]:checked {
 
       ~ .slider__slide {
-        transform:  translateX(-320px);
+        transform:  translateX(-260px);
       }
 
       ~ .slider__label:nth-of-type(2) {
@@ -123,7 +123,7 @@
     &[value$="6"]:checked {
 
       ~ .slider__slide {
-        transform:  translateX(-640px);
+        transform:  translateX(-540px);
       }
 
       ~ .slider__label:nth-of-type(3) {

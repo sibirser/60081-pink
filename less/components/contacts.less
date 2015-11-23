@@ -1,12 +1,28 @@
 /*Contacts*/
 
 .contacts {
-  text-align: center;
+  padding-bottom:   15px;
+  text-align:       center;
 
   &__center-wrap {
+    position:         relative;
+
     width:            @layout--xs;
     padding:          @padding--xs;
     margin:           @center;
+
+    &:after {
+      position:  absolute;
+      left:      -20px;
+      bottom:    -85px;
+      z-index:   50;
+
+      content:           '';
+      display:           block;
+      width:             @layout--xs+40;
+      height:            60px;
+      background-image:  url("@{img}/triangle-white-footer.svg");
+    }
   }
 
   &__title {

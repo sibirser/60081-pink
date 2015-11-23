@@ -1,18 +1,18 @@
 /*Price table*/
 
 .price-table {
-  width:       840px;
+  width:            840px;
 
-  border-collapse: collapse;
+  border-collapse:  collapse;
 
   &__row:first-of-type {
 
     & .price-table__cell {
-      padding: 0;
-      padding-bottom: 21px;
+      padding:           0;
+      padding-bottom:    21px;
 
-      border-top: none;
-      border-bottom: none;
+      border-top:        none;
+      border-bottom:     none;
       background-color:  @table-head-bg;
     }
   }
@@ -20,50 +20,68 @@
   &__row:nth-of-type(2) {
 
     & .price-table__cell {
-      height: 60px;
-      border-top: none;
+      height:       60px;
+      border-top:   none;
     }
   }
 
   &__cell {
-    position: relative;
+    position:        relative;
 
-    width:    280px;
-    height:   61px;
-    // padding-top: 25px;
-    // padding-bottom: 25px;
-    padding-left: 22px;
+    width:           280px;
+    height:          61px;
+    padding-left:    22px;
 
-    line-height: @line-height--big;
-    text-transform: uppercase;
+    line-height:     @line-height--big;
+    text-transform:  uppercase;
 
-    border:   2px  @table-border-style  @table-border-color;
+    border:            2px  @table-border-style  @table-border-color;
+    background-color:  @table-cell-bg;
+
+    overflow:  hidden;
+
+    &--hit {
+
+      &:before {
+        position:          absolute;
+        left:              -27px;
+        top:               12px;
+
+        content:           'Хит';
+        display:           block;
+        width:             100px;
+        height:            30px;
+
+        font-family:       @font-family;
+        font-weight:       800;
+        text-align:        center;
+        line-height:       30px;
+        color:             #fff;
+
+        background-color:  @purple;
+        transform:         rotate(-45deg);
+      }
+    }
   }
 
   &__title {
-    margin-bottom: 0;
+    margin-bottom:   0;
 
-    font-family: @font-family--bold;
-    font-weight: bold;
-    font-size: @font-size--h3;
-    line-height: @headings-line-height;
-    color:  @table-head-color;
-    text-align: center;
-    text-transform: uppercase;
+    font-family:     @font-family--bold;
+    font-weight:     bold;
+    font-size:       @font-size--h3;
+    line-height:     @headings-line-height;
+    color:           @table-head-color;
+    text-align:      center;
+    text-transform:  uppercase;
   }
 
   &__price {
-    font-family: @font-family--light;
-    font-size: @text-size-5;
-    line-height: @line-height--mid;
-    color:  @table-head-color;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  &
-  
-  td {
-  // border: 1px solid #000;
+    font-family:     @font-family--light;
+    font-size:       @text-size-5;
+    line-height:     @line-height--mid;
+    color:           @table-head-color;
+    text-align:      center;
+    text-transform:  uppercase;
   }
 }
