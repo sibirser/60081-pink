@@ -37,10 +37,11 @@
       }
 
       ~ .slider__label:nth-of-type(1) {
-        bottom:             93px;
+        bottom:             96px;
 
         width:              12px;
         height:             12px;
+        margin-left:        -32px;
 
         background-color:   transparent;
         border:             3px solid @control-color--active;
@@ -51,16 +52,17 @@
 
       ~ .slider__slide {
         transform:  translateX(-320px);
+      }
 
       ~ .slider__label:nth-of-type(2) {
-        bottom:             93px;
+        bottom:             96px;
 
         width:              12px;
         height:             12px;
+        margin-left:        -6px;
 
         background-color:   transparent;
         border:             3px solid @control-color--active;
-      }
       }
     }
 
@@ -68,23 +70,79 @@
 
       ~ .slider__slide {
         transform:  translateX(-640px);
+      }
 
       ~ .slider__label:nth-of-type(3) {
-        bottom:             93px;
+        bottom:             96px;
 
         width:              12px;
         height:             12px;
+        margin-left:        19px;
 
         background-color:   transparent;
         border:             3px solid @control-color--active;
       }
+    }
+
+    &[value$="4"]:checked {
+
+      ~ .slider__slide {
+        transform:  translateX(0);
+      }
+
+      ~ .slider__label:nth-of-type(1) {
+        bottom:             96px;
+
+        width:              12px;
+        height:             12px;
+        margin-left:        -32px;
+
+        background-color:   transparent;
+        border:             3px solid @control-color--active;
+      }
+    }
+
+    &[value$="5"]:checked {
+
+      ~ .slider__slide {
+        transform:  translateX(-320px);
+      }
+
+      ~ .slider__label:nth-of-type(2) {
+        bottom:             96px;
+
+        width:              12px;
+        height:             12px;
+        margin-left:        -6px;
+
+        background-color:   transparent;
+        border:             3px solid @control-color--active;
+      }
+    }
+
+    &[value$="6"]:checked {
+
+      ~ .slider__slide {
+        transform:  translateX(-640px);
+      }
+
+      ~ .slider__label:nth-of-type(3) {
+        bottom:             96px;
+
+        width:              12px;
+        height:             12px;
+        margin-left:        19px;
+
+
+        background-color:   transparent;
+        border:             3px solid @control-color--active;
       }
     }
   }
 
   &__label {
     position:         absolute;
-    bottom:           96px;
+    bottom:           100px;
     left:             50%;
 
     display:  block;
@@ -98,7 +156,7 @@
     cursor:            pointer;
 
     &:nth-of-type(1) {
-      margin-left:      -32px;
+      margin-left:      -29px;
     }
 
     &:nth-of-type(2) {
