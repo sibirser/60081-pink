@@ -1,0 +1,41 @@
+/*Member person*/
+
+.member-person {
+  margin-bottom: 18px;
+  border: none;
+
+  &__center-wrap {
+    .center-wrap();
+  }
+
+  &__inner {
+    margin-bottom:  16.4px;
+  }
+
+  &__label {
+    display:         block;
+    padding-left:    22px;
+    margin-bottom:   5px;
+
+    line-height:     @line-height--big;
+    text-transform:  uppercase;
+    color:           @form-label-color;
+  }
+
+  &__input {
+    display:        block;
+    width:          100%;
+    padding:        15px 20px;
+
+    font-size:      @font-size--h3;
+    line-height:    @headings-line-height;
+    color:          @form-place-color;
+
+    border:         2px @form-border-style @form-border-color;
+    border-radius:  2px;
+
+    .placeholder(@form-place-color);
+  }
+
+  br { display:  none; }
+}
