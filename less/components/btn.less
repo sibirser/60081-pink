@@ -13,16 +13,28 @@
   font-weight:       bold;
   color:             @btn-color;
 
-  background-color:  none;
+  background-color:  transparent;
 
   &--download {
     width:          100%;
     min-height:     55px;
     margin-bottom:  30px;
 
-
     border:            @btn-border-width @btn-border-style @btn-border-color;
     border-radius:     @btn-radius;
     background-color:  @btn-bg;
+  }
+
+  &--photos {
+    width:          100%;
+    min-height:     55px;
+    margin-bottom:  25px;
+    padding:        15px 20px;
+
+    color:          @btn-color--photo;
+    text-transform: uppercase;
+
+    border:            @btn-bdr-width--photo @btn-bdr-style--photo @btn-bdr-color--photo;
+    background-color:  @btn-bg--photo;
   }
 }
