@@ -1,3 +1,98 @@
 /*Achievement*/
 
+.achievement {
+  padding: 0;
+  padding-bottom: 50px;
 
+  border: none;
+
+  &__center-wrap {
+    .center-wrap();
+  }
+
+  &__title {
+    margin-bottom:   45px;
+
+    line-height:     @line-height--mid+.03;
+    text-transform:  uppercase;
+    color:           @form-label-color;
+    font-weight:     normal;
+    text-align:      center;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked {
+
+      + .achievement__label {
+
+        &:before {
+          position:  absolute;
+          top:       50%;
+          left:      0;
+          z-index:   10;
+
+          content:  '';
+          display:  block;
+          width:    10px;
+          height:   2px;
+
+          background-color:  @form-label-color;
+
+          transform:         rotate(45deg)  translate(9px, -4.5px)
+        }
+
+        &:after {
+          position:  absolute;
+          top:       50%;
+          left:      0;
+          z-index:   10;
+
+          content:  '';
+          display:  block;
+          width:    20px;
+          height:   2px;
+
+          background-color:  @form-label-color;
+
+          transform:         rotate(-45deg)  translate(10px, 10px);
+        }
+      }
+    }
+  }
+
+  &__label {
+    position:       relative;
+
+    display:        block;
+    padding-left:   60px;
+    margin-bottom:  52px;
+
+    font-size:      @text-size-2;
+    line-height:    @headings-line-height;
+
+    cursor:         pointer;
+
+    &:last-of-type { margin-bottom:  0; }
+  }
+
+  &__box {
+    &:before {
+      position:          absolute;
+      left:              0;
+      top:               50%;
+      content:          '';
+      display:           block;
+      width:             40px;
+      height:            40px;
+      margin-top:        -20px;
+      border:            2px solid @gray-90;
+
+      background-color:  #fff;
+      cursor:            pointer;
+    }
+  }
+
+  br { display: none; }
+}
