@@ -1,17 +1,21 @@
 /*Member apps*/
 
 .member-apps {
-  padding-top: 28px;
-  padding-bottom: 0;
-  border:  none;
-  background-color: @form-bg;
+  padding:            0;
+  padding-top:        28px;
+  padding-bottom:     0;
+  margin-bottom:      44px;
+
+  border:             none;
+  background-color:   @form-bg;
 
   &__center-wrap {
     .center-wrap();
   }
 
   &__title {
-    margin-bottom: 40px;
+    margin-bottom:   40px;
+
     line-height:     @line-height--mid+.03;
     text-transform:  uppercase;
     color:           @form-label-color;
@@ -20,58 +24,61 @@
   }
 
   &__check {
-    display: none;
+    display:  none;
 
     &:checked {
 
       + .member-apps__label {
         &:after {
-          position: absolute;
-          left: 20px;
-          top: 50%;
-          z-index: 100;
-          content:'';
-          display: block;
-          width: 16px;
-          height: 16px;
-          margin-top: -8px;
-          margin-left: -8px;
-          border-radius: 50%;
-          background-color: @purple;
+          position:          absolute;
+          left:              20px;
+          top:               50%;
+          z-index:           100;
+          content:           '';
 
-          cursor: normal;
+          display:           block;
+          width:             16px;
+          height:            16px;
+          margin-top:        -8px;
+          margin-left:       -8px;
+          border-radius:     50%;
+          background-color:  @purple;
+
+          cursor:            normal;
         }
 
         &:before {
-          cursor: normal;
+          cursor:  normal;
         }
       }
     }
   }
 
   &__label {
-    position: relative;
-    display: block;
-    padding-left: 60px;
-    margin-bottom: 45px;
+    position:       relative;
 
-    font-size: @text-size-2;
-    line-height: @headings-line-height;
-    cursor: pointer;
+    display:        block;
+    padding-left:   60px;
+    margin-bottom:  45px;
+
+    font-size:      @text-size-2;
+    line-height:    @headings-line-height;
+
+    cursor:         pointer;
     
     &:before {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      content:'';
-      display: block;
-      width: 40px;
-      height: 40px;
-      margin-top: -20px;
-      border: 2px solid @gray-90;
-      border-radius: 50%;
-      background-color: #fff;
-      cursor: pointer;
+      position:          absolute;
+      left:              0;
+      top:               50%;
+      content:          '';
+      display:           block;
+      width:             40px;
+      height:            40px;
+      margin-top:        -20px;
+      border:            2px solid @gray-90;
+      border-radius:     50%;
+      background-color:  #fff;
+      cursor:            pointer;
     }
   }
 

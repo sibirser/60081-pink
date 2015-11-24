@@ -1,7 +1,89 @@
 /*Range control*/
 
+.controls() {
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+  width: 60px;
+
+  font-size: 0;
+
+  background-color:  transparent;
+  box-shadow: none;
+  border: 2px @form-border-style @form-border-color;
+  border-radius: 2px;
+}
+
 .range-control {
-  display: flex;
-  flew-flow: row nowrap;
-  justify-content: space-between;
+  position: relative;
+
+  margin-bottom: 7px;
+
+  &__minus {
+    .controls();
+    left: 0;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      display: block;
+      width: 27px;
+      height: 3px;
+      margin-left: -11.5px;
+      margin-top: -1.5px;
+      background-color:  @form-place-color;
+    }
+  }
+
+  &__plus {
+    .controls();
+    right: 0;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      display: block;
+      width: 27px;
+      height: 3px;
+      margin-left: -14.5px;
+      margin-top: -1.5px;
+      background-color:  @form-place-color;
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      display: block;
+      width: 27px;
+      height: 3px;
+      margin-left: -14.5px;
+      margin-top: -1.5px;
+      background-color:  @form-place-color;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__input {
+    display:        block;
+    width:          100%;
+    padding:        15px 60px;
+
+    font-size:      @font-size--h3;
+    line-height:    @headings-line-height;
+    color:          @form-place-color;
+    text-align: center;
+
+    border:         2px @form-border-style @form-border-color;
+    border-radius:  2px;
+    outline:        none;
+
+    .placeholder(@form-place-color);
+  }
 }

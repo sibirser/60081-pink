@@ -1,21 +1,54 @@
 /*Member date*/
 
 .member-date {
+  margin-bottom: 23px;
+  padding:  0;
+
+  border:   none;
 
   &__center-wrap {
     .center-wrap();
   }
 
   &__title {
-    
+    margin-bottom:   40px;
+
+    line-height:     @line-height--mid+.03;
+    text-transform:  uppercase;
+    color:           @form-label-color;
+    font-weight:     normal;
+    text-align:      center;
   }
 
   &__input {
+    display:        block;
+    width:          100%;
+    padding:        15px 20px;
+    margin-bottom:  8px;
 
+    font-size:      @font-size--h3;
+    line-height:    @headings-line-height;
+    color:          @form-place-color;
+
+    border:         2px @form-border-style @form-border-color;
+    border-radius:  2px;
+    outline:        none;
+
+    .placeholder(@form-place-color);
+
+    &:read-only {
+      background-color: @form-readonly-bg;
+    }
   }
 
   &__label {
+    display:         block;
+    margin-bottom:   18px;
 
+    line-height:     @line-height--big;
+    text-transform:  uppercase;
+    text-align:      center;
+    color:           @form-label-color;
   }
 
   br { display: none; }
