@@ -1,24 +1,25 @@
 /*Popup*/
 
 .popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 100;
+  position:    fixed;
+  top:         50%;
+  left:        50%;
+  z-index:     100;
 
-  display: none;
+  display:     none;
 
-  transform: translateX(-50%) translateY(-50%);
-  box-shadow: 0 3px 10px -7px #000,
-              0 -3px 10px -7px #000;
+  box-shadow:  0 3px 10px -7px #000,
+               0 -3px 10px -7px #000;
+
+  transform:   translateX(-50%) translateY(-50%);
 
   &__content {
-    padding-top: 25px;
-    padding-bottom: 22px;
+    padding-top:       25px;
+    padding-bottom:    22px;
 
-    text-align: center;
+    text-align:        center;
 
-    background-color: #fff;
+    background-color:  #fff;
   }
 
   &__center-wrap {
@@ -26,10 +27,10 @@
   }
 
   &__title {
-    margin-bottom: 26px;
+    margin-bottom:  26px;
 
-    font-family: @font-family--bold;
-    line-height: 1.33;
+    font-family:    @font-family--bold;
+    line-height:    1.33;
   }
 
   &__text {
@@ -37,20 +38,20 @@
   }
 
   &__control {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top:       48px;
+    padding-bottom:    48px;
 
-    background-color: #fff;
+    background-color:  #fff;
 
     &--gray {
-      background-color: @gray-95;
+      background-color:  @gray-95;
     }
   }
 
   &:nth-of-type(2) {
 
     & .popup__control {
-      padding-top: 6px;
+      padding-top:  6px;
     }
   }
 

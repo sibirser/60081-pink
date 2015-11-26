@@ -1,60 +1,55 @@
 /*Count names*/
 
+.main-count-rule() {
+    display:         block;
+    line-height:     @line-height--big;
+    text-transform:  uppercase;
+    color:           @form-label-color;
+}
+
 .counts-names {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-bottom: 20px;
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       nowrap;
+  margin-bottom:   20px;
 
   &:last-of-type { margin-bottom:  0; }
 
   &__count {
-    width: 68px;
+    width:  68px;
 
     & .counts-names__descr {
-      text-align: center;
+      text-align:  center;
     }
     & .counts-names__value {
-      height: 64px;
+      height:                      64px;
 
-      text-align: center;
-      font-size:  @text-size-2;
-      line-height: 62px;
-      color: @text-color;
+      text-align:                  center;
+      font-size:                   @text-size-2;
+      line-height:                 62px;
+      color:                       @text-color;
 
-      border: 2px @form-border-style @form-border-color;
-      border-radius: 2px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-right: none;
+      border:                      2px @form-border-style @form-border-color;
+      border-radius:               2px;
+      border-top-right-radius:     0;
+      border-bottom-right-radius:  0;
+      border-right:                none;
     }
   }
 
   &__descr {
-    display:         block;
+    .main-count-rule();
     margin-bottom:   5px;
 
-    line-height:     @line-height--big;
-    text-transform:  uppercase;
-    color:           @form-label-color;
-
     & label {
-      display:         block;
+      .main-count-rule();
       padding-left:    20px;
-
-      line-height:     @line-height--big;
-      text-transform:  uppercase;
-      color:           @form-label-color;
     }
   }
 
   &__value {
-    display:         block;
+    .main-count-rule();
     margin-bottom:   15px;
-
-    line-height:     @line-height--big;
-    text-transform:  uppercase;
-    color:           @form-label-color;
   }
 
   &__inform {
@@ -62,19 +57,19 @@
   }
 
   &__input {
-    display:        block;
-    width:          100%;
-    padding:        15px 20px;
+    display:                    block;
+    width:                      100%;
+    padding:                    15px  20px;
 
-    font-size:      @font-size--h3;
-    line-height:    @headings-line-height;
-    color:          @form-place-color;
+    font-size:                  @font-size--h3;
+    line-height:                @headings-line-height;
+    color:                      @form-place-color;
 
-    border:         2px @form-border-style @form-border-color;
-    border-radius:  2px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    outline:        none;
+    border:                     2px  @form-border-style  @form-border-color;
+    border-radius:              2px;
+    border-top-left-radius:     0;
+    border-bottom-left-radius:  0;
+    outline:                    none;
 
     .placeholder(@form-place-color);
   }

@@ -9,6 +9,7 @@
   &:before {
     position:  absolute;
     top:       -100px;
+
     content:  '';
     display:   block;
     width:     100%;
@@ -18,9 +19,7 @@
   }
 
   &__center-wrap {
-    width:            @layout--xs;
-    margin:           @center;
+    .center-wrap();
+    padding:  0;
   }
-
-
 }
