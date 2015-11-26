@@ -3,19 +3,30 @@
 .main-header {
   margin-bottom:        42px;
 
-  background-image:     url("@{img}/main-header-hand.png"),
-                        url("@{img}/main-header-hand--back.png"),
-                        url("@{img}/main-header-bg.png");
+  background-image:     url("@{img}/main-header-bg.png");
 
-  background-position:  44.4%  170px,
-                        50%  203px,
-                        50%  -65px;
+  background-position:  50%  -65px;
 
-  background-size:      auto  315px,
-                        auto  198px,
-                        auto  545px;
+  background-size:      auto  545px;
 
   background-repeat:    no-repeat;
 
   background-color:     #2b3a4a;
+
+  & .header-bottom {
+
+    &__center-wrap {
+
+      background-image:     url("@{img}/main-header-hand.png"),
+                            url("@{img}/main-header-hand--back.png");
+
+      background-position:  93%  85px,
+                            50%  119px;
+
+      background-size:      505px  auto,
+                            110px  auto;
+
+      background-repeat:    no-repeat;
+    }
+  }
 }

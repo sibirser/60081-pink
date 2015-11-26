@@ -1,5 +1,30 @@
 /*Available*/
 
+.available-icon-yes() {
+  position:  absolute;
+  top:       50%;
+  left:      20%;
+
+  content:   '';
+  display:   block;
+  height:    2px;
+
+  background-color:  @check-color--yes;
+}
+
+.available-icon-no() {
+  position:  absolute;
+  top:       50%;
+  left:      23%;
+
+  content:   '';
+  display:   block;
+  width:     34px;
+  height:    2px;
+
+  background-color:  @check-color--no;
+}
+
 .available {
   position:   absolute;
   right:      0;
@@ -14,66 +39,34 @@
   &--yes {
 
     &:before {
-      position:  absolute;
-      top:       50%;
-      left:      20%;
+      .available-icon-yes();
 
-      content:  '';
-      display:  block;
-      width:    14px;
-      height:   2px;
+      width:      14px;
 
-      background-color:  @check-color--yes;
-
-      transform:         rotate(45deg)  translate(9px, -0.5px)
+      transform:  rotate(45deg)  translate(9px, -0.5px)
     }
 
     &:after {
-      position:  absolute;
-      top:       50%;
-      left:      20%;
+        .available-icon-yes();
 
-      content:  '';
-      display:  block;
-      width:    28px;
-      height:   2px;
+      width:      28px;
 
-      background-color:  @check-color--yes;
-
-      transform:         rotate(-45deg)  translate(10px, 10px);
+      transform:  rotate(-45deg)  translate(10px, 10px);
     }
   }
 
   &--no {
 
     &:before {
-      position:  absolute;
-      top:       50%;
-      left:      23%;
+      .available-icon-no();
 
-      content:  '';
-      display:  block;
-      width:    34px;
-      height:   2px;
-
-      background-color:  @check-color--no;
-
-      transform:         rotate(45deg)  translate(2px, 0)
+      transform:  rotate(45deg)  translate(2px, 0)
     }
 
     &:after {
-      position:  absolute;
-      top:       50%;
-      left:      23%;
+      .available-icon-no();
 
-      content:  '';
-      display:  block;
-      width:    34px;
-      height:   2px;
-
-      background-color:  @check-color--no;
-
-      transform:         rotate(-45deg)  translate(2px, 0);
+      transform:  rotate(-45deg)  translate(2px, 0);
     }
   }
 }

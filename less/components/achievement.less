@@ -1,10 +1,23 @@
 /*Achievement*/
 
-.achievement {
-  padding: 0;
-  padding-bottom: 50px;
+.achievement-base() {
+  position:          absolute;
+  top:               50%;
+  left:              0;
+  z-index:           10;
 
-  border: none;
+  content:           '';
+  display:           block;
+  height:            2px;
+
+  background-color:  @form-label-color;
+}
+
+.achievement {
+  padding:         0;
+  padding-bottom:  50px;
+
+  border:          none;
 
   &__center-wrap {
     .center-wrap();
@@ -28,35 +41,18 @@
       + .achievement__label {
 
         &:before {
-          position:  absolute;
-          top:       50%;
-          left:      0;
-          z-index:   10;
-
-          content:  '';
-          display:  block;
-          width:    10px;
-          height:   2px;
-
-          background-color:  @form-label-color;
+          .achievement-base();
+          width:             10px;
 
           transform:         rotate(45deg)  translate(9px, -4.5px)
         }
 
         &:after {
-          position:  absolute;
-          top:       50%;
-          left:      0;
-          z-index:   10;
+          .achievement-base();
 
-          content:  '';
-          display:  block;
-          width:    20px;
-          height:   2px;
+          width:              20px;
 
-          background-color:  @form-label-color;
-
-          transform:         rotate(-45deg)  translate(10px, 10px);
+          transform:          rotate(-45deg)  translate(10px, 10px);
         }
       }
     }

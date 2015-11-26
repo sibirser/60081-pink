@@ -1,9 +1,10 @@
 /*Map area*/
 
 .map-area {
-  position:  relative;
+  position:   relative;
 
-  height:    200px;
+  height:     200px;
+
   overflow:   hidden;
 
   &__google {
@@ -12,9 +13,27 @@
     height:   200px;
   }
 
+  &:after {
+    position:          absolute;
+    left:              50%;
+    top:               50%;
+    z-index:           -1;
+
+    content:           '';
+    display:           block;
+    width:             36px;
+    height:            36px;
+
+    background-color:  @purple;
+    border:            10px solid #fff;
+    border-radius:     50%;
+
+    transform:         translate(-18px, -4px);
+  }
+
   &__img {
     position:     absolute;
-    top:          0;
+    top:          -445px;
     left:         50%;
     z-index:      -1;
 
