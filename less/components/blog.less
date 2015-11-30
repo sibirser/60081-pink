@@ -1,0 +1,42 @@
+/*Blog*/
+
+.blog {
+  margin-bottom:  27px;
+
+  &__title {
+    margin-bottom:  5px;
+
+    font-family:    @font-family--bold;
+    line-height:    1.5;
+  }
+
+  &__pubdate {
+    margin-bottom:    17px;
+
+    font-size:        @font-size--small;
+    color:            @purple;
+    text-transform:   uppercase;
+  }
+
+  &__text {
+    margin-bottom:  22px;
+
+    line-height:    1.95;
+  }
+
+  &__link {
+    text-decoration:  none;
+    color:            inherit;
+  }
+
+  hr {
+    border-style:  solid;
+    border-width:  1px;
+    border-color:  @gray-90;
+  }
+
+  &:last-of-type:not(:only-of-type) {
+
+    & hr { display:  none; }
+  }
+}

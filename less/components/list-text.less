@@ -1,0 +1,29 @@
+/*List text*/
+
+.list-text {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-bottom: 30px;
+
+  &__item {
+    position: relative;
+    margin-bottom: 34px;
+    line-height: 1.43;
+
+    &:before { 
+      position: absolute;
+      left: -.8em;
+      top: -.3em;
+
+      content: "\2022";
+      margin-right: 5px;
+
+      font-size: 28px;
+      color: red;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
