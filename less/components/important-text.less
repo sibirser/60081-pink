@@ -1,5 +1,23 @@
 /*Important text*/
 
 .important-text {
-  
+  position:       relative;
+
+  margin:         0;
+  margin-bottom:  28px;
+  padding-left:   22px;
+
+  line-height:    1.93;
+
+  &:before {
+    position:          absolute;
+    left:              0;
+
+    content:           '';
+    display:           block;
+    height:            100%;
+    width:             2px;
+
+    background-color:  @purple;
+  }
 }

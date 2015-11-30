@@ -18,12 +18,10 @@
   &__item {
     display:          inline-block;
     margin-bottom:    10px;
+    margin-right:     9px;
     vertical-align:   middle;
 
-    &:last-of-type {
-
-      & .pagination__link { margin-right:  0; }
-    }
+      &:last-of-type { margin-right:  0; }
 
     &.active {
 
@@ -36,7 +34,7 @@
     min-width:        63px;
     height:           63px;
     padding:          10px 15px;
-    margin-right:     9px;
+
     font-family:      @font-family--bold;
     font-weight:      bold;
     font-size:        @text-size-2;
@@ -44,7 +42,34 @@
     text-align:       center;
     text-decoration:  none;
     color:            @blue;
+
     border:           2px  solid  @gray-90;
     border-radius:    2px;
+  }
+
+  &--nav {
+    padding-top: 5px;
+    margin-bottom: 60px;
+    text-align: center;
+
+    & .pagination__link {
+      width: 130px;
+      text-transform: uppercase;
+    }
+
+    & .pagination__item {
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      &:first-of-type { margin-right:  20px; }
+
+      &:last-of-type {
+        margin-bottom: 0;
+
+        & .pagination__link {
+          width:  280px;
+        }
+      }
+    }
   }
 }
