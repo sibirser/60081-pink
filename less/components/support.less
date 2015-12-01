@@ -8,10 +8,14 @@
   margin-bottom:      20px;
 
   font-size:          0;
-  vertical-align:     middle;
+  vertical-align:     top;
 
-  background-image:   url("@{img}/sprite-support.png");
-  background-repeat:  no-repeat;
+  // background-image:   url("@{img}/sprite-support.png");
+  // background-repeat:  no-repeat;
+
+  @media(min-width: 700px) {
+    margin-bottom:  35px;
+  }
 }
 
 .support {
@@ -20,25 +24,40 @@
     .support-icon();
     margin-left:  30px;
 
-    background-position:  5px  0;
+    background-image:   url("@{img}/apple-logo.svg");
+    background-repeat:  no-repeat;
+    background-position:  8px  0;
+
+    @media(min-width: 700px) { margin-left:  40px; }
   }
 
   &__android {
     .support-icon();
 
-    background-position:  -70px  0;
+    background-image:   url("@{img}/android-logo.svg");
+    background-repeat:  no-repeat;
+    background-position:  12px  9px;
   }
 
   &__win {
     .support-icon();
     margin-right:  0;
 
-    background-position:  -150px  0;
+    background-image:   url("@{img}/microsoft-logo.svg");
+    background-repeat:  no-repeat;
+    background-position:  12px  12px;
   }
 
   &__text {
     font-family:  @font-family--light;
     color:        @support-text-color;
     text-align:   center;
+
+    @media(min-width: 700px) {
+      width:        300px;
+
+      font-size:    @text-size-2;
+      line-height:  1.33;
+    }
   }
 }

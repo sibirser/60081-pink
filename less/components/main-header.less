@@ -3,30 +3,56 @@
 .main-header {
   margin-bottom:        42px;
 
-  background-image:     url("@{img}/main-header-bg.png");
+  background-image:     url("@{img}/iphone-hand-mobile.png"),
+                        url("@{img}/background-mobile.jpg");
 
-  background-position:  50%  -65px;
+  background-position:  48%  171px,
+                        50%  -5px;
 
-  background-size:      auto  545px;
+  background-size:      260px  auto,
+                        auto  500px;
 
   background-repeat:    no-repeat;
 
   background-color:     #2b3a4a;
+  
+  @media(min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+    background-image:     url("@{img}/iphone-hand-mobile@1x.png"),
+                          url("@{img}/background-mobile@1x.jpg");
+  }
 
-  & .header-bottom {
+  @media(-webkit-min-device-pixel-ratio: 2), 
+        (min-resolution: 192dpi) { 
+    background-image:     url("@{img}/iphone-hand-mobile@2x.png"),
+                          url("@{img}/background-mobile@2x.jpg");
+  }
 
-    &__center-wrap {
+  @media(-webkit-min-device-pixel-ratio: 3), 
+        (min-resolution: 288dpi) { 
+    background-image:     url("@{img}/iphone-hand-mobile@3x.png"),
+                          url("@{img}/background-mobile@3x.jpg");
+  }
 
-      background-image:     url("@{img}/main-header-hand.png"),
-                            url("@{img}/main-header-hand--back.png");
+  @media(min-width: 700px) {
+    background-image:     url("@{img}/iphone-hand-tablet.png"),
+                          url("@{img}/background-tablet.jpg");
 
-      background-position:  93%  85px,
-                            50%  119px;
+    background-position:  50%  185px,
+                          50%  2px;
 
-      background-size:      505px  auto,
-                            110px  auto;
+    background-size:      700px auto;
 
-      background-repeat:    no-repeat;
+    @media(min-resolution: 144dpi),
+          (min-resolution: 1.5dppx) {
+      background-image:     url("@{img}/iphone-hand-tablet@1x.png"),
+                            url("@{img}/background-tablet@1x.jpg");
+    }
+
+    @media(-webkit-min-device-pixel-ratio: 2), 
+          (min-resolution: 192dpi) { 
+      background-image:     url("@{img}/iphone-hand-tablet@2x.png"),
+                            url("@{img}/background-mobile@2x.jpg");
     }
   }
 }
