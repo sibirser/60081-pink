@@ -32,9 +32,14 @@
 
   display:    block;
   width:      68px;
-  height:     59px;
+  height:     100%;
 
   font-size:  0;
+
+  @media(min-width: 700px) {
+    right: 50%;
+    margin-right: -34px;
+  }
 
   &--yes {
 

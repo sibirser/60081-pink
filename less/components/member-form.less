@@ -11,5 +11,17 @@
   &__prev {
     line-height:  @line-height--big;
     text-align:   center;
+
+    @media(min-width: 700px) {
+      padding: 0 60px;
+      margin-bottom: 0;
+      font-size: @font-size--h3;
+      line-height: @headings-line-height;
+    }
+
+    &--hidden {
+
+      @media(max-width: 700px) { display: none; }
+    }
   }
 }

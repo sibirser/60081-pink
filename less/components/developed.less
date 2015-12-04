@@ -5,6 +5,12 @@
   margin:        0 auto;
   padding-left:  6px;
 
+  @media(min-width: 700px) {
+    width: 135px;
+    margin: 0;
+    padding-top: 8px;
+  }
+
   &__link {
     text-decoration:  none;
     color:            @blue;
@@ -12,7 +18,10 @@
   }
 
   &__img {
-    width:        42px;
+    width:        27px;
+    height:       34px;
     margin-left:  5px;
+
+  @media(min-width: 700px) { margin-left: 10px; }
   }
 }
