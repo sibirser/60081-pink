@@ -40,6 +40,11 @@
 
     border:            @btn-bdr-width--photo  @btn-bdr-style--photo  @btn-bdr-color--photo;
     background-color:  @btn-bg--photo;
+
+    @media(min-width: 700px) {
+      width:          100%;
+      margin-bottom:  33px;
+    }
   }
 
   &--submit {
@@ -52,6 +57,10 @@
     border-color:      @green;
     border-style:      solid;
     border-radius:     2px;
+
+    @media(min-width: 700px) {
+      width:  300px;
+    }
   }
 
   &--popup {
@@ -63,5 +72,7 @@
     border-color:      @green;
     border-style:      solid;
     border-radius:     2px;
+
+    @media(min-width: 700px) { width: 100%; }
   }
 }

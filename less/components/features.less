@@ -11,8 +11,8 @@
   background-image:     url("@{img}/iphone-screen-mobile.png"),
                         linear-gradient(-4.5deg, @features-bg 50%, #fff 50%);
   background-repeat:    no-repeat;
-  background-position:  50%  110%,
-                        50%  0;
+  background-position:  50%   110%,
+                        50%   0;
 
   background-size:      auto  330px,
                         100%  100px;
@@ -24,7 +24,7 @@
     background-image:     url("@{img}/iphone-screen-mobile-3@1x.png"),
                           url("@{img}/iphone-case-mobile@1x.png");
 
-    background-position:  50%  100%;
+    background-position:  50%    100%;
     background-size:      138px  auto,
                           157px  auto;
   }
@@ -34,7 +34,7 @@
     background-image:     url("@{img}/iphone-screen-mobile-3@2x.png"),
                           url("@{img}/iphone-case-mobile@2x.png");
 
-    background-position:  50%  100%;
+    background-position:  50%    100%;
     background-size:      138px  auto,
                           157px  auto;
   }
@@ -44,23 +44,23 @@
     background-image:     url("@{img}/iphone-screen-mobile-3@3x.png"),
                           url("@{img}/iphone-case-mobile@3x.png");
 
-    background-position:  50%  100%;
+    background-position:  50%    100%;
     background-size:      138px  auto,
                           157px  auto;
   }
 
   @media(min-width: 700px) {
-    padding-top:  100px;
-    padding-bottom: 8px;
-    margin-bottom: 55px;
+    padding-top:     100px;
+    padding-bottom:  8px;
+    margin-bottom:   55px;
 
     background-image:     url("@{img}/iphone-screen-tablet.png"),
                           linear-gradient(-4.5deg, @features-bg 50%, #fff 50%);
 
     background-position:  39.2%  30px,
-                          50%  0;
+                          50%    0;
     background-size:      268px  auto,
-                          100%  100px;
+                          100%   100px;
 
     @media(min-resolution: 144dpi),
           (min-resolution: 1.5dppx) {
@@ -75,27 +75,10 @@
     }
   }
 
-  // &:before {
-  //   position:          absolute;
-  //   top:               -100px;
-  //   z-index:           -1;
-
-  //   content:           '';
-  //   display:           block;
-  //   width:             100%;
-  //   height:            100px;
-
-  //   background-image:  linear-gradient(to left top, @features-bg 50%, transparent 50%);
-
-  //   @media(min-width: 700px) { background-image:  linear-gradient(-4.5deg, @features-bg 50%, transparent 50%); }
-  // }
-
   &__center-wrap {
     .center-wrap();
 
-    @media(min-width: 700px) {
-      padding-left:  350px;
-    }
+    @media(min-width: 700px) { padding-left:  350px; }
 
   }
 
@@ -110,7 +93,7 @@
     text-align:     center;
 
     @media(min-width: 700px) {
-      text-align:  left;;
+      text-align:  left;
     }
   }
 

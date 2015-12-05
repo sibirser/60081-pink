@@ -10,21 +10,24 @@
   font-size:         0;
   background-color:  #fff;
 
-  box-shadow:        none;
-  border:            2px @form-border-style @form-border-color;
+  border:            2px  @form-border-style  @form-border-color;
   border-radius:     2px;
+
+  box-shadow:        none;
 }
 
 .controls-2() {
   position:          absolute;
   top:               50%;
   left:              50%;
+
   content:           '';
   display:           block;
   width:             27px;
   height:            3px;
   margin-left:       -14.5px;
   margin-top:        -1.5px;
+
   background-color:   @form-place-color;
 }
 
@@ -33,9 +36,11 @@
 
   margin-bottom:  7px;
 
+  @media(min-width: 700px) { margin-bottom:  10px; }
+
   &__minus {
     .controls();
-    left: 0;
+    left:  0;
 
     &:before {
       position:          absolute;

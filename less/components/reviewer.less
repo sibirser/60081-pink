@@ -1,8 +1,8 @@
 /*Reviewer*/
 
 .reviewer {
-  display: flex;
-  flex-direction: column;
+  display:         flex;
+  flex-direction:  column;
 
   &__title {
     margin-bottom:  12px;
@@ -15,10 +15,10 @@
     text-align:     center;
 
     @media(min-width: 700px) {
-      margin-bottom: 5px;
+      margin-bottom:  5px;
 
-      font-size: @font-size--h3+.2;
-      line-height: 1.5;
+      font-size:      @font-size--h3+.2;
+      line-height:    1.5;
     }
   }
 
@@ -27,31 +27,26 @@
     text-align:   center;
 
     @media(min-width: 700px) {
-      order: -1;
-      margin-bottom: 17px;
-
-      font-size: @font-size+.4;
-      line-height: @headings-line-height;
+      order:          -1;
+      margin-bottom:  17px;
+      font-size:      @font-size+.4;
+      line-height:    @headings-line-height;
     }
   }
 
   &__comment {
     margin:  0;
 
-    &:before {
-      content:  open-quote;
-    }
+    &:before { content:  open-quote; }
 
-    &:after {
-      content:  close-quote;
-    }
+    &:after { content:  close-quote; }
   }
 
   &__prof {
     display:  none;
 
-    text-align: center;
+    text-align:  center;
 
-    @media(min-width: 700px) { display: block; }
+    @media(min-width: 700px) { display:  block; }
   }
 }

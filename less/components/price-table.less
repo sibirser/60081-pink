@@ -6,17 +6,17 @@
   border-collapse:  collapse;
 
   @media(min-width: 700px) {
-    width: 100%;
+    width:  100%;
 
     &__row {
 
       &:before {
-        width: 155px;
+        display:           table-cell;
+        width:             155px;
+        padding-left:      16px;
 
-        display: table-cell;
-        padding-left: 16px;
-        font-size: 14px;
-        line-height: 40px;
+        font-size:         14px;
+        line-height:       40px;
 
         border:            2px  @table-border-style  @table-border-color;
         background-color:  @table-cell-bg;
@@ -27,27 +27,27 @@
         &:before {
           content: '';
 
-          border: none;
-          background-color: transparent;
+          border:            none;
+          background-color:  transparent;
         }
       }
 
       &:nth-of-type(2) {
 
         &:before {
-          content: 'Розовый фильтр';
+          content:  'Розовый фильтр';
         }
       }
 
       &:nth-of-type(3) {
         &:before {
-          content: 'Смайлики';
+          content:  'Смайлики';
         }
       }
 
       &:nth-of-type(4) {
         &:before {
-          content: 'Комментарии';
+          content:  'Комментарии';
         }
       }
     }
@@ -63,7 +63,7 @@
       border-bottom:     none;
       background-color:  @table-head-bg;
 
-      @media(min-width: 700px) { padding-bottom: 10px; }
+      @media(min-width: 700px) { padding-bottom:  10px; }
     }
   }
 
@@ -73,7 +73,7 @@
       height:       60px;
       border-top:   none;
 
-      @media(min-width: 720px) { height: 46px; }
+      @media(min-width: 720px) { height:  46px; }
     }
   }
 
@@ -93,9 +93,9 @@
     overflow:          hidden;
 
     @media(min-width: 700px) {
-      height: 47px;
-      width: 155px;
-      font-size: 0;
+      height:     47px;
+      width:      155px;
+      font-size:  0;
     }
 
     &--hit {
@@ -122,8 +122,8 @@
         transform:         rotate(-45deg);
 
         @media(min-width: 700px) {
-          left: -28px;
-          top: 4px;
+          left:  -28px;
+          top:   4px;
         }
       }
     }
@@ -141,9 +141,9 @@
     text-transform:  uppercase;
 
     @media(min-width: 700px) { 
-      margin-top: 13px;
-      font-size: @text-size-1;
-      line-height: 1.775;
+      margin-top:   13px;
+      font-size:    @text-size-1;
+      line-height:  1.775;
     }
   }
 
@@ -156,8 +156,8 @@
     text-transform:  uppercase;
 
     @media(min-width: 700px) { 
-      font-size: @text-size-2;
-      line-height: @headings-line-height;
+      font-size:    @text-size-2;
+      line-height:  @headings-line-height;
     }
   }
 }

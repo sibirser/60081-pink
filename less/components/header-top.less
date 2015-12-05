@@ -33,17 +33,17 @@
   }
 
   &__toggle {
-    position:  absolute;
-    right:     20px;
+    position:          absolute;
+    right:             20px;
 
-    display:   block;
-    width:     50px;
-    height:    25px;
+    display:           block;
+    width:             50px;
+    height:            25px;
 
     background-color:  #fff;
 
     @media(min-width: 700px) {
-      right: 40px;
+      right:  40px;
     }
 
     &--active {
@@ -59,8 +59,9 @@
 
     line-height:        2.4rem;
 
-    user-select:        none;
     background-color:   transparent;
+
+    user-select:        none;
 
     > span {
       position:         relative;
@@ -73,7 +74,7 @@
       background:       #fff;
       border-radius:    .2rem;
 
-      transition:       background .3s .5s;
+      transition:       background  .3s  .5s;
 
         &:before,
         &:after {
@@ -88,7 +89,7 @@
           border-radius:      .2rem;
 
           transform-origin:   50% 50%;
-          transition:         top .3s .6s, transform .3s;
+          transition:         top  .3s  .6s, transform  .3s;
         }
 
         &:before {
@@ -103,13 +104,13 @@
       > span {
         background:   transparent;
 
-        transition:   background .3s 0;
+        transition:   background  .3s  0;
       
       &:before,
       &:after {
         top:          0;
 
-        transition:   top .3s, transform .3s .5s;
+        transition:   top  .3s, transform  .3s  .5s;
       }
 
       &:before {

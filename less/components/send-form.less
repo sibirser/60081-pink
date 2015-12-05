@@ -3,8 +3,17 @@
 .send-form {
   margin-bottom:  58px;
 
+  @media(min-width: 700px) { margin-bottom:  66px; }
+
   &__center-wrap {
     .center-wrap();
+
+    @media(min-width: 700px) {
+      display:          flex;
+      justify-content:  space-between;
+      align-items:      baseline;
+    }
+
   }
 
   &__required {
