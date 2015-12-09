@@ -1,5 +1,23 @@
 /*Btns*/
 
+.green-hover() {
+
+  &:link {
+    color:         @btn-color--photo;
+    border-color:  @btn-bdr-color--photo;
+  }
+
+  &:hover {
+    border-color:  @btn-bdr-color--photo-hover;
+  }
+
+  &:active {
+    color:             #fff;
+
+    background-color:  @btn-bdr-color--photo-hover;
+  }
+}
+
 .btn {
   display:           inline-block;
   vertical-align:    middle;
@@ -23,6 +41,7 @@
     border:            @btn-border-width  @btn-border-style  @btn-border-color;
     border-radius:     @btn-radius;
     background-color:  @btn-bg;
+    outline:           none;
 
     @media(min-width:700px) {
       margin-bottom:  44px;
@@ -35,6 +54,16 @@
       margin-bottom:   67px;
 
       font-size:       21px;
+    }
+
+    &:hover {
+      color:             @purple;
+
+      background-color:  #fff; 
+    }
+
+    &:active {
+      color: fade(@purple, 30%);
     }
   }
 
@@ -49,11 +78,14 @@
 
     border:            @btn-bdr-width--photo  @btn-bdr-style--photo  @btn-bdr-color--photo;
     background-color:  @btn-bg--photo;
+    outline:           none;
 
     @media(min-width: 700px) {
       width:          100%;
       margin-bottom:  33px;
     }
+
+    .green-hover();
   }
 
   &--submit {
@@ -67,9 +99,26 @@
     border-color:      @green;
     border-style:      solid;
     border-radius:     2px;
+    outline:           none;
 
     @media(min-width: 700px) {
       width:  300px;
+    }
+
+    &:link {
+      color:              #fff;
+
+      background-color:   @green;
+      border-color:       @green;
+    }
+
+    &:hover {
+      border-color:      #1c9b5e;
+      background-color:  #1c9b5e;
+    }
+
+    &:active {
+      color:             fade(@white, 30%);
     }
   }
 
@@ -83,7 +132,22 @@
     border-color:      @green;
     border-style:      solid;
     border-radius:     2px;
+    outline:          none;
 
     @media(min-width: 700px) { width:  100%; }
+
+    .green-hover();
+  }
+
+  &:disabled,
+  &--disabled {
+    &,
+    &:link,
+    &:hover,
+    &:active {
+      color:             #fff;
+      border-color:      @gray-90;
+      background-color:  @gray-90;
+    }
   }
 }

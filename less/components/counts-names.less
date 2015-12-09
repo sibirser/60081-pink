@@ -97,6 +97,19 @@
 
     .placeholder(@form-place-color);
 
+    &:link {
+      border:  2px  @form-border-style  @form-border-color;
+    }
+
+    &:hover {
+      border-color:  @form-border-color--hover;
+    }
+
+    &:active,
+    &:focus {
+      border-color:  @form-border-color--focus;
+    }
+
     @media(min-width: 700px) {
       border-top-left-radius:     2px;
       border-bottom-left-radius:  2px;
@@ -113,6 +126,22 @@
       text-decoration:  none;
       line-height:      2.14;
       color:            @blue;
+    }
+
+    &:link {
+      color:            @blue;
+      text-decoration:  none;
+    }
+
+    &:hover {
+      color:            @purple;
+      text-decoration:  underline;
+    }
+
+    &:active {
+      color:            @purple;
+      text-decoration:  none;
+      opacity:          .3;
     }
   }
 

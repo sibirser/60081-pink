@@ -1,5 +1,24 @@
 /*Member apps*/
 
+.checked() {
+  position:          absolute;
+  left:              20px;
+  top:               50%;
+  z-index:           100;
+
+  content:           '';
+  display:           block;
+  width:             16px;
+  height:            16px;
+  margin-top:        -8px;
+  margin-left:       -8px;
+
+  border-radius:     50%;
+  background-color:  @purple;
+
+  cursor:            normal;
+}
+
 .member-apps {
   padding:            0;
   padding-top:        28px;
@@ -68,22 +87,7 @@
 
       + .member-apps__label {
         &:after {
-          position:          absolute;
-          left:              20px;
-          top:               50%;
-          z-index:           100;
-
-          content:           '';
-          display:           block;
-          width:             16px;
-          height:            16px;
-          margin-top:        -8px;
-          margin-left:       -8px;
-
-          border-radius:     50%;
-          background-color:  @purple;
-
-          cursor:            normal;
+          .checked();
         }
 
         &:before { cursor:  normal; }
@@ -102,6 +106,43 @@
     line-height:    @headings-line-height;
 
     cursor:         pointer;
+
+    &:link {
+
+      &:before {
+        border-color:  @gray-90;
+      }
+    }
+
+    &:hover {
+
+      &:before {
+        border-color:  @blue;
+      }
+
+      &:after {
+        .checked();
+      }
+    }
+
+    &:active {
+
+      &:before {
+        border-color:  @purple;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:active,
+    &:focus {
+
+      &:before {
+        border-color:  @purple;
+      }
+    }
 
     &:before {
       position:          absolute;

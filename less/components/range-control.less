@@ -14,6 +14,7 @@
   border-radius:     2px;
 
   box-shadow:        none;
+  outline:           none;
 }
 
 .controls-2() {
@@ -29,6 +30,33 @@
   margin-top:        -1.5px;
 
   background-color:   @form-place-color;
+  outline:           none;
+}
+
+.hover-control() {
+
+  &:link {
+    border-color:  @gray-90;
+
+    &:before,
+    &:after {
+      background-color: @blue;
+    }
+  }
+
+  &:hover {
+    border-color:  @blue;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @blue;
+
+    &:before,
+    &:after {
+      background-color: #fff;
+    }
+  }
 }
 
 .range-control {
@@ -56,6 +84,8 @@
 
       background-color:  @form-place-color;
     }
+
+    .hover-control();
   }
 
   &__plus {
@@ -71,6 +101,8 @@
 
       transform:  rotate(90deg);
     }
+
+    .hover-control();
   }
 
   &__input {

@@ -6,7 +6,7 @@
   &__list {
     position:    absolute;
     right:       -20px;
-    top:         51px;
+    top:         48px;
     z-index:     50;
 
     display:     none;
@@ -16,7 +16,8 @@
     list-style:  none;
 
     @media(min-width: 700px) {
-      top:  65px;
+      top:    65px;
+      right:  -40px;
     }
 
     @media(min-width: 1200px) {
@@ -49,13 +50,29 @@
     border-bottom-color:  @menu-border-color2;
     background-color:     @menu-color;
 
+    @media(max-width: 1200px) {
+      &:link {
+        color:  @menu-link-color;
+      }
+
+      &:hover {
+        color:  @menu-link-color--hover;
+      }
+
+      &:active {
+        color:  @menu-link-color--active;
+      }
+    }
+
     @media(min-width: 700px) {
       width:  @layout--sm;
     }
 
     @media(min-width: 1200px) {
+      position:        relative;
+
       width:           auto;
-      padding:         45px 30px;
+      padding:         47px 30px;
 
       font-family:     @font-family;
       font-size:       18px;
@@ -65,6 +82,30 @@
 
       background:      none;
       border:          none;
+
+      &:after {
+        position:          absolute;
+        left:              30px;
+        right:             30px;
+        bottom:            35px;
+
+        content:           '';
+        display:           none;
+        height:            2px;
+
+        background-color:  #fff;
+      }
+
+      &:hover {
+
+        &:after { display:  block; }
+      }
+
+      &:active {
+        opacity:  .3;
+
+        &:after { display:  none; }
+      }
     }
   }
 
@@ -77,6 +118,8 @@
         @media(min-width: 1200px) {
 
           padding-left:  0;
+
+          &:after { left:  0; }
         }
       }
     }
@@ -88,6 +131,8 @@
         @media(min-width: 1200px) {
 
           padding-right:  0;
+
+          &:after { right:  0; }
         }
       }
     }

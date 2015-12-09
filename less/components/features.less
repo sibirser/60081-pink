@@ -186,6 +186,26 @@
 
       width:     300px;
       padding:   0 30px;
+
+      &:hover {
+
+        &:after {
+          position:       absolute;
+          top:            -322px;
+          left:           50%;
+
+          content:        '';
+          display:        block;
+          width:          184px;
+          height:         274px;
+          margin-left:    -3px;
+
+          border:         8px solid #252527;
+          border-radius:  5px;
+
+          transform:      translateX(-50%);
+        }
+      }
     }
 
     &:nth-of-type(1) {

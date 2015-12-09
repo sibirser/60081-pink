@@ -77,9 +77,10 @@
 
         &:before {
           .achievement-base();
+
           width:             10px;
 
-          transform:         rotate(45deg)  translate(9px, -4.5px)
+          transform:         rotate(45deg)  translate(9px, -4.5px);
         }
 
         &:after {
@@ -104,6 +105,50 @@
     line-height:    @headings-line-height;
 
     cursor:         pointer;
+
+    &:hover {
+
+      &:before {
+        .achievement-base();
+
+        width:             10px;
+
+        transform:         rotate(45deg)  translate(9px, -4.5px);
+      }
+
+      &:after {
+        .achievement-base();
+
+        width:              20px;
+
+        transform:          rotate(-45deg)  translate(10px, 10px);
+      }
+
+      .achievement__box {
+
+        &:before {
+          border-color:  @form-border-color--hover;
+        }
+      }
+    }
+
+    &:active {
+
+      &:before {
+        display:  none;
+      }
+
+      &:after {
+        display:  none;
+      }
+
+      .achievement__box {
+
+        &:before {
+          border-color:  @form-border-color--focus;
+        }
+      }
+    }
 
     &:last-of-type { margin-bottom:  0; }
   }

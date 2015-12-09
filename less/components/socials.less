@@ -10,6 +10,16 @@
   background-position:  50%  50%;
   border:               3px  solid  @socials-bdr-color;
   border-radius:        50%;
+
+  &:hover {
+    border-color:  @socials-bdr-color--hover;
+  }
+
+  &:active {
+    border-color:  fade(@socials-bdr-color--hover, 10%);
+
+    svg { opacity:  .3; }
+  }
 }
 
 .socials {

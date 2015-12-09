@@ -104,6 +104,19 @@
     &:read-only {
       background-color:  @form-readonly-bg;
     }
+
+    &:link {
+      border:  2px  @form-border-style  @form-border-color;
+    }
+
+    &:not(:read-only):hover {
+      border-color:  @form-border-color--hover;
+    }
+
+    &:not(:read-only):active,
+    &:not(:read-only):focus {
+      border-color:  @form-border-color--focus;
+    }
   }
 
   &__label {

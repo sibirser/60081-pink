@@ -50,6 +50,19 @@
     outline:        none;
 
     .placeholder(@form-place-color);
+
+    &:link {
+      border:  2px  @form-border-style  @form-border-color;
+    }
+
+    &:hover {
+      border-color:  @form-border-color--hover;
+    }
+
+    &:active,
+    &:focus {
+      border-color:  @form-border-color--focus;
+    }
   }
 
   br { display:  none; }

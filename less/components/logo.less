@@ -3,14 +3,31 @@
 .logo {
   text-align:  center;
 
+  &__link {
+    display:  block;
+
+    &:hover {
+      path { fill:  @purple; }
+    }
+
+    &:active {
+      path {
+        fill:     #fff;
+        opacity:  .3;
+      }
+      .logo__path-purple { fill:  @purple; }
+      .logo__path-blue { fill:  @blue; }
+    }
+  }
+
   @media(min-width: 700px) {
     position:  relative;
     top:       -17px;
   }
 
   @media(min-width: 1200px) {
-    padding-top:     44px;
-    padding-bottom:  25px;
+    padding-top:     45px;
+    padding-bottom:  20px;
   }
 
   &--full {
@@ -19,6 +36,42 @@
     @media(min-width: 700px) {
       margin-bottom:  0;
       padding-top:    12px;
+    }
+  }
+
+  &__svg { display:  none; }
+
+  &__mobile,
+  &__tablet,
+  &__desktop {
+    display:  none;
+
+    &--blue { display:  none; }
+  }
+
+  &__mobile {
+
+    @media(max-width: 700px) { display:  block; }
+
+  }
+
+  &__tablet {
+
+    @media(min-width: 700px) and (max-width: 1200px) { display:  block; }
+
+    &--blue {
+
+      @media(max-width: 1200px) { display:  block; }
+    }
+  }
+
+  &__desktop {
+
+    @media(min-width: 1200px) { display:  block; }
+
+    &--blue {
+
+      @media(min-width: 1200px) { display:  block; }
     }
   }
 }

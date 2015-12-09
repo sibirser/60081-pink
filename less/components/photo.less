@@ -49,6 +49,35 @@
     background-color:  #fff;
     border:            2px  solid  @gray-90;
     border-radius:     50%;
+    outline:           none;
+
+    &:link {
+      border-color:  @gray-90;
+
+      &:before,
+      &:after {
+        background-color:  @gray-90;
+      }
+    }
+
+    &:hover {
+      border-color:  @blue;
+
+      &:before,
+      &:after {
+        background-color:  @blue;
+      }
+    }
+
+    &:active {
+      background-color:  @blue;
+      border-color:      @blue;
+
+      &:before,
+      &:after {
+        background-color:  #fff;
+      }
+    }
 
     @media(min-width: 700px) {
       top:     -28px;
