@@ -9,23 +9,29 @@
 @blue-dark:        #1d2631; //Загрузка
 @blue:             #283645; //Таблица, labels
 @purple:           #d22856; //Хит, контакты
-@krayola:          #b5b9be; //labels
+@krayola-10:       fade(@blue, 10%); //labels
+@krayola-30:       fade(@blue, 30%); //labels
+@krayola-60:       fade(@blue, 60%); //labels
 @gray-10:          #efefef;
 @gray-87:          #dedede;
 @gray-90:          #e5e5e5; //бордер
 @gray-95:          #f2f2f2; //Серкции
 @green:            #2aab6d; //Кнопки
 
-@arrow-color:      #bec2c7;
+@arrow-color:           fade(@blue, 30%);
+@arrow-color--hover:    fade(@blue, 60%);
+@arrow-color--active:   fade(@blue, 10%);
 
 @header-top-bg:    fadeout(@black,70%);
 @download-bg:      @blue-dark;
 
-@menu-link-color:         @white;
-@menu-color:              @blue;
-@menu-border-type:        solid;
-@menu-border-color1:      #485461;
-@menu-border-color2:      #000101;
+@menu-link-color:          @white;
+@menu-link-color--hover:   @purple;
+@menu-link-color--active:  fade(@menu-link-color--hover, 30%);
+@menu-color:               @blue;
+@menu-border-type:         solid;
+@menu-border-color1:       #485461;
+@menu-border-color2:       #000101;
 
 @btn-color:               @white;
 @btn-border-style:        solid;
@@ -34,22 +40,24 @@
 @btn-bg:                  transparent;
 @btn-radius:              50px;
 
-@btn-color--photo:        @blue;
-@btn-bdr-color--photo:    @gray-90;
-@btn-bdr-style--photo:    solid;
-@btn-bdr-width--photo:    2px;
-@btn-bg--photo:           @white;
+@btn-color--photo:            @blue;
+@btn-bdr-color--photo:        @gray-90;
+@btn-bdr-color--photo-hover:  @blue;
+@btn-bdr-style--photo:        solid;
+@btn-bdr-width--photo:        2px;
+@btn-bg--photo:               @white;
 
 @btn-bdr-color--submit:   @green;
 
 @border-color:            @gray-90;
-@border-color--hover:     ;
 
 @support-text-color:      @white;
 
 @features-bg:             @gray-95;
 
-@control-color:           @krayola;
+@control-color:           @krayola-30;
+@control-color--hover:    @krayola-60;
+@control-color--down:     @krayola-10;
 @control-color--active:   @blue;
 
 @check-color--yes:        @lime;
@@ -63,14 +71,17 @@
 
 @prices-bg:               @gray-95;
 
-@form-label-color:        @purple;
-@form-border-style:       solid;
-@form-border-color:       @gray-90;
-@form-place-color:        @blue;
-@form-bg:                 @gray-95;
-@form-readonly-bg:        @gray-95;
+@form-label-color:            @purple;
+@form-border-style:           solid;
+@form-border-color:           @gray-90;
+@form-border-color--hover:    @blue;
+@form-border-color--focus:    @purple;
+@form-place-color:            @blue;
+@form-bg:                     @gray-95;
+@form-readonly-bg:            @gray-95;
 
-@socials-bdr-color:       #e9ebec;
+@socials-bdr-color:         #e9ebec;
+@socials-bdr-color--hover:  @blue;
 
 
 //images
@@ -81,7 +92,6 @@
 @headings-color:          @blue;
 
 @link-color:              @purple;
-@link-color--hover:       ;
 
 @font-size-base:          10px;
 @font-size:               1.4rem;
