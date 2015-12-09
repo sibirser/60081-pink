@@ -15,6 +15,12 @@
     background-color:  transparent;
   }
 
+  @media(min-width: 1200px) {
+    margin-bottom:     35px;
+
+    background-color:  transparent;
+  }
+
   &__center-wrap {
     .center-wrap();
   }
@@ -31,6 +37,8 @@
       padding-bottom:  40px;
 
       border:          2px  @form-border-style  @form-border-color;
+
+      @media(min-width: 700px) { padding-bottom:  42px; }
     }
   }
 
@@ -48,10 +56,12 @@
       top:               -18px;
       left:              186px;
 
-      padding:           0 20px;
+      padding:           0  20px;
 
       background-color:  #fff;
     }
+
+    @media(min-width: 1200px) { left:  346px; }
   }
 
   hr {

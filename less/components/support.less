@@ -13,6 +13,10 @@
   @media(min-width: 700px) {
     margin-bottom:  35px;
   }
+
+  @media(min-width: 1200px) {
+    margin-bottom:  53px;
+  }
 }
 
 .support {
@@ -24,6 +28,13 @@
     background-image:     url("@{img}/apple-logo.svg");
     background-repeat:    no-repeat;
     background-position:  8px  0;
+    background:           none;
+
+    svg {
+      position: relative;
+      top: 0px;
+      left: 6px;
+    }
 
     @media(min-width: 700px) { margin-left:  40px; }
   }
@@ -34,6 +45,13 @@
     background-image:     url("@{img}/android-logo.svg");
     background-repeat:    no-repeat;
     background-position:  12px  9px;
+    background:           none;
+
+    svg {
+      position: relative;
+      top: 8px;
+      left: 10px;
+    }
   }
 
   &__win {
@@ -43,6 +61,13 @@
     background-image:     url("@{img}/microsoft-logo.svg");
     background-repeat:    no-repeat;
     background-position:  12px  12px;
+    background:           none;
+
+    svg {
+      position:  relative;
+      top:       10px;
+      left:      10px;
+    }
   }
 
   &__text {

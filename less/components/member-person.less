@@ -6,14 +6,24 @@
 
   border:         none;
 
-  @media(min-width: 700px) { margin-bottom: 22px; }
+  @media(min-width: 700px) { margin-bottom:  22px; }
+  @media(min-width: 1200px) { margin-bottom:  20px; }
 
   &__center-wrap {
     .center-wrap();
+
+    @media(min-width: 1200px) {
+      display:          flex;
+      justify-content:  space-between;
+    }
   }
 
   &__inner {
     margin-bottom:  16.4px;
+
+    @media(min-width: 1200px) {
+      width:  300px;
+    }
   }
 
   &__label {

@@ -13,12 +13,11 @@
                         auto   500px;
 
   background-repeat:    no-repeat;
-
   background-color:     #2b3a4a;
   
   @media(min-resolution: 144dpi),
         (min-resolution: 1.5dppx) {
-    background-image:     url("@{img}/iphone-hand-mobile@1x.png"),
+    background-image:     url("@{img}/iphone-hand-mobile@2x.png"),
                           url("@{img}/background-mobile@1x.jpg");
   }
 
@@ -43,22 +42,48 @@
     background-position:  50%  185px,
                           50%  2px;
 
-    background-size:      700px auto;
+    background-size:      700px  auto;
 
     @media(min-resolution: 144dpi),
           (min-resolution: 1.5dppx) {
       background-image:     url("@{img}/iphone-hand-tablet@1x.png"),
                             url("@{img}/background-tablet@1x.jpg");
+
+      background-size:      700px   auto,
+                            1200px  auto;
     }
 
     @media(-webkit-min-device-pixel-ratio: 2), 
           (min-resolution: 192dpi) { 
       background-image:     url("@{img}/iphone-hand-tablet@2x.png"),
                             url("@{img}/background-mobile@2x.jpg");
+
+      background-size:      700px   auto,
+                            1030px  auto;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    margin-bottom: 65px;
+
+    background-image:     url("@{img}/iphone-hand-desktop@1x.png"),
+                          url("@{img}/background-fullsize.jpg");
+
+    background-position:  58.4%  209px,
+                          50%    2px;
+
+    background-size:      1050px  auto,
+                          1275px  auto;
+
+    @media(-webkit-min-device-pixel-ratio: 2), 
+          (min-resolution: 192dpi) { 
+      background-image:     url("@{img}/iphone-hand-desktop@2x.png"),
+                            url("@{img}/background-fullsize.jpg");
     }
   }
 
   & .header-bottom__title {
+
     @media(min-width: 700px) {
       width:          300px;
       padding:        0 60px;
@@ -66,6 +91,22 @@
 
       font-size:      40px;
       text-indent:    -5px;
+    }
+
+    @media(min-width: 1200px) {
+      padding:        0;
+      margin-bottom:  23px;
+
+      font-size:      50px;
+      text-indent:    0; 
+    }
+  }
+
+  & .header-top {
+
+    @media(min-width: 1200px) {
+
+      margin-bottom:  108px;
     }
   }
 }

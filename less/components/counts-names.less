@@ -15,6 +15,7 @@
   margin-bottom:   20px;
 
   @media(min-width: 700px) { margin-bottom:  22px; }
+  @media(min-width: 700px) { margin-bottom:  5px; }
 
   &:last-of-type { margin-bottom:  0; }
 
@@ -72,6 +73,11 @@
       width:         300px;
       margin-right:  51px;
     }
+
+    @media(min-width: 1200px) {
+      display:  flex;
+      width:    622px;
+    }
   }
 
   &__input {
@@ -107,6 +113,19 @@
       text-decoration:  none;
       line-height:      2.14;
       color:            @blue;
+    }
+  }
+
+  &__group {
+
+    @media(min-width: 1200px) {
+      width:  300px;
+    }
+
+    &:first-of-type {
+      @media(min-width: 1200px) {
+        margin-right:  20px;
+      }
     }
   }
 }

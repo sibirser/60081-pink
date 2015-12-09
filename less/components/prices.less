@@ -19,8 +19,20 @@
     margin-bottom:   28px;
   }
 
+  @media(min-width: 1200px) {
+    padding-top: 157px;
+    padding-bottom: 94px;
+    margin-bottom: 48px;
+  }
+
   &__center-wrap {
     .center-wrap();
     padding:  0;
+  }
+
+  & .slider__slide {
+
+    @media(min-width: 700px) { position:  static; }
+    @media(min-width: 1200px) { padding:  0; }
   }
 }

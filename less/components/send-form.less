@@ -4,6 +4,7 @@
   margin-bottom:  58px;
 
   @media(min-width: 700px) { margin-bottom:  66px; }
+  @media(min-width: 1200px) { margin-bottom:  37px; }
 
   &__center-wrap {
     .center-wrap();
@@ -21,7 +22,14 @@
     text-align:      center;
   }
 
-  span {
+  &__star {
     color:  @purple;
+  }
+
+  &__hidden {
+
+    color:  @blue;
+
+    @media(max-width: 1200px) { display:  none; }
   }
 }

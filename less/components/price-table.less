@@ -20,12 +20,21 @@
 
         border:            2px  @table-border-style  @table-border-color;
         background-color:  @table-cell-bg;
+
+        @media(min-width: 1200px) {
+          padding-left:    20px;
+          padding-top:     15px;
+          padding-bottom:  14px;
+
+          font-size:       @text-size-2;
+          line-height:     @headings-line-height;
+        }
       }
 
       &:nth-of-type(1) {
 
         &:before {
-          content: '';
+          content:           '';
 
           border:            none;
           background-color:  transparent;
@@ -64,6 +73,7 @@
       background-color:  @table-head-bg;
 
       @media(min-width: 700px) { padding-bottom:  10px; }
+      @media(min-width: 1200px) { padding-bottom:  20px; }
     }
   }
 
@@ -125,6 +135,11 @@
           left:  -28px;
           top:   4px;
         }
+
+        @media(min-width: 1200px) {
+          left:  -26px;
+          top:   10px;
+        }
       }
     }
   }
@@ -142,8 +157,16 @@
 
     @media(min-width: 700px) { 
       margin-top:   13px;
+
       font-size:    @text-size-1;
       line-height:  1.775;
+    }
+
+    @media(min-width: 1200px) {
+      margin-top:   17px;
+
+      font-size:    @text-size-2;
+      line-height:  @headings-line-height;
     }
   }
 
@@ -158,6 +181,11 @@
     @media(min-width: 700px) { 
       font-size:    @text-size-2;
       line-height:  @headings-line-height;
+    }
+
+    @media(min-width: 1200px) { 
+      font-size:    @text-size-5;
+      line-height:  @line-height--mid;
     }
   }
 }

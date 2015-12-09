@@ -18,6 +18,15 @@
     @media(min-width: 700px) {
       top:  65px;
     }
+
+    @media(min-width: 1200px) {
+      position:         static;
+
+      display:          flex;
+      width:            500px;
+      justify-content:  space-between;
+      flex-wrap:        wrap;
+    }
   }
 
   &__link {
@@ -42,6 +51,45 @@
 
     @media(min-width: 700px) {
       width:  @layout--sm;
+    }
+
+    @media(min-width: 1200px) {
+      width:           auto;
+      padding:         45px 30px;
+
+      font-family:     @font-family;
+      font-size:       18px;
+      line-height:     1;
+      font-weight:     normal;
+      text-transform:  capitalize;
+
+      background:      none;
+      border:          none;
+    }
+  }
+
+  &__item {
+
+    &:first-of-type {
+
+      .main-menu__link {
+
+        @media(min-width: 1200px) {
+
+          padding-left:  0;
+        }
+      }
+    }
+
+    &:last-of-type {
+
+      .main-menu__link {
+
+        @media(min-width: 1200px) {
+
+          padding-right:  0;
+        }
+      }
     }
   }
 }
