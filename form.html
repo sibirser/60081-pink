@@ -220,11 +220,15 @@
         <div class="photos__center-wrap">
           <div class="photos__inner">
             <h4 class="photos__title">Ваши фотографии из поездки *</h4>
-            <a class="btn  btn--photos" href="#">Загрузить фото</a>
-            <input class="photos__input" name="photos" type="file" accept="image/jpeg,image/png,image/gif" multiple>
+            <!-- <a class="btn  btn--photos" href="#">Загрузить фото</a> -->
+            <!-- <input class="photos__input" name="photos" type="file" accept="image/jpeg,image/png,image/gif" multiple> -->
+            <div class="btn btn--photos">
+              <input class="btn__input" id="photo-download" name="photos" type="file" accept="image/jpeg,image/png,image/gif" multiple>
+              <label for="photo-download">Загрузить фото</label>
+            </div>
             <hr>
             <div class="imgs__photo-wrap">
-              <div class="imgs__photo-item">
+<!--               <div class="imgs__photo-item">
                 <figure class="photo">
                   <img src="img/img-1.jpg" alt="#" width="68">
                   <figcaption class="photo__title">IMG-1.JPG</figcaption>
@@ -279,7 +283,7 @@
                   <figcaption class="photo__title">IMG-8.JPG</figcaption>
                 </figure>
                 <button class="photo__close"></button>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

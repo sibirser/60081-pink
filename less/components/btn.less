@@ -71,7 +71,7 @@
     width:             280px;
     min-height:        55px;
     margin-bottom:     25px;
-    padding:           15px  20px;
+    padding:           0;
 
     color:             @btn-color--photo;
     text-transform:    uppercase;
@@ -79,6 +79,12 @@
     border:            @btn-bdr-width--photo  @btn-bdr-style--photo  @btn-bdr-color--photo;
     background-color:  @btn-bg--photo;
     outline:           none;
+
+    & .btn__input { display:  none; }
+    & label {
+      display:  block;
+      padding:  15px  20px;
+    }
 
     @media(min-width: 700px) {
       width:          100%;

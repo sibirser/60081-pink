@@ -35,4 +35,92 @@
   output1.addEventListener("change", function(){
     if (isNaN(output1.value)) alert("Введите число");
   });
+})(),
+
+(function(){
+
+  if (!("FormData" in window)) {
+    return;
+  }
+
+  var form = document.querySelector(".member-form");
+  var btnClose = document.querySelectorAll(".photo__close");
+
+  if ("FileReader" in window) {
+    form.querySelector("#photo-download").addEventListener("change", function(){
+
+      var files = this.files;
+
+      for(var i =0; i < files.length; i++) {
+        preview(files[i]);
+      }
+
+    });
+
+    function preview(file) {
+      var area = document.querySelector(".imgs__photo-wrap");
+      if (file.type.match(/image.*/)) {
+        var reader = new FileReader();
+
+        reader.addEventListener("load", function(event){
+          var imgItem = document.createElement("div");
+          var figure = document.createElement("figure");
+          var img = document.createElement("img");
+          var figcapt = document.createElement("figcaption");
+          var btnPhoto = document.createElement("button");
+
+          imgItem.classList.add("imgs__photo-item");
+          figure.classList.add("photo");
+          img.src = event.target.result;
+          img.alt = file.name;
+          figcapt.classList.add("photo__title");
+          figcapt.innerHTML = file.name.slice(0, 5)+file.name.slice(-4);
+          btnPhoto.classList.add("photo__close");
+
+          area.appendChild(imgItem);
+          imgItem.appendChild(figure);
+          figure.appendChild(img);
+          figure.appendChild(figcapt);
+          imgItem.appendChild(btnPhoto);
+        });
+
+
+
+        reader.readAsDataURL(file);
+      }
+    }
+  }
+
+  // [].forEach.call(btnClose, function(close){
+  //   close.addEventListener("click", function(event){
+  //     event.preventDefault();
+  //     area.removeChild(imgItem);
+  //   });
+  // });
+
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    var data = new FormData(form);
+
+    request(data, function(response){
+      console.log(response);
+    });
+  });
+
+  function request(data, fn){
+    var xhr = new XMLHttpRequest;
+    var time = (new Date()).getTime();
+
+    xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+    xhr.addEventListener("readystatechange", function(){
+      if (xhr.readyState == 4) {
+        fn(xhr.responseText);
+      }
+    });
+
+    xhr.send(data);
+  }
+
+
 })();
