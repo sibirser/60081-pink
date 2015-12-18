@@ -95,6 +95,18 @@
         }
     }
 
+    &:hover {
+
+      span {
+        background-color:  @purple;
+
+        &:before,
+        &:after {
+          background-color:  @purple;
+        }
+      }
+    }
+
     &--close {
 
       > span {
@@ -117,17 +129,8 @@
           transform:  rotate3d(0, 0, 1, -45deg);
         }
       }
-    }
-
-    &:hover {
-
-      span {
-        background-color:  @purple;
-
-        &:before,
-        &:after {
-          background-color:  @purple;
-        }
+      &:hover {
+        span {background-color: transparent;}
       }
     }
 

@@ -128,4 +128,16 @@
     xhr.send(data);
   }
 
+})(),
+
+(function(){
+  var toggler = document.querySelector(".header-top__toggle");
+  var topActive = document.querySelector(".header-top");
+  var menuActive = document.querySelector(".main-menu__list");
+  toggler.onclick = function(event){
+    event.preventDefault();
+    toggler.classList.toggle("header-top__toggle--close");
+    menuActive.classList.toggle("main-menu__list--active")
+    topActive.classList.toggle("header-top--active");
+  }
 })();
