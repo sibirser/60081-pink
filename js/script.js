@@ -10,6 +10,10 @@
     var input = elements.querySelector(".range-control__input");
     var minus = elements.querySelector(".range-control__minus");
     var plus  = elements.querySelector(".range-control__plus");
+    var parent = input.parentNode.parentNode;
+    var people = document.querySelector(".member-count__inner");
+    var day = document.querySelectorAll(".member-date__area")[1];
+    var text;
 
     plus.addEventListener("tap", function(event){
       event.preventDefault();
@@ -28,11 +32,15 @@
         value = 0;
       }
 
+      if (parent == people) {
+        text = "чел";
+      } else if (parent == day) { text = "дней"; }
+
       if (num) {
-        input.value = (value < 365) ? (value + 1 + " " + "дней") : (value = 365 + " " + "дней");
+        input.value = (value < 365) ? (value + 1 + " " + text) : (value = 365 + " " + text);
       }
       else {
-        input.value = (value > 0) ? (value - 1 + " " + "дней") : (value = 0 + " " + "дней");
+        input.value = (value > 0) ? (value - 1 + " " + text) : (value = 0 + " " + text);
       }
     }
   }
@@ -48,6 +56,7 @@
   var form = document.querySelector(".member-form");
   var area = form.querySelector(".imgs__photo-wrap");
   var queue = [];
+  var hr = document.querySelector(".photos hr");
   var template = document.querySelector("#image-template").innerHTML;
 
 
@@ -77,6 +86,7 @@
         div.innerHTML = html;
 
         area.appendChild(div);
+        hr.style.display = "block";
 
         div.querySelector(".photo__close").addEventListener("click", function(event){
           event.preventDefault();
@@ -98,6 +108,7 @@
     });
 
     div.parentNode.removeChild(div);
+    if (queue.length == 0) hr.style.display = "none";
   }
 
   form.addEventListener("submit", function(event){
@@ -140,4 +151,60 @@
     menuActive.classList.toggle("main-menu__list--active")
     topActive.classList.toggle("header-top--active");
   }
+})(),
+
+(function(){
+  var form = document.querySelector(".member-form");
+  var area = form.querySelector(".member-count__area");
+  var hr = document.querySelector(".member-count hr");
+  var template = document.querySelector("#people-template").innerHTML;
+  var input = document.querySelector(".member-count .range-control__input");
+  var changePlus = document.querySelector(".member-count .range-control__plus");
+  var changeMinus = document.querySelector(".member-count .range-control__minus");
+
+  window.onload = function(){
+    addInputs(parseInt(input.value, 10));
+  }
+
+  changePlus.addEventListener("tap", function(){
+    addInputs(parseInt(input.value, 10));
+  });
+
+  changeMinus.addEventListener("tap", function(){
+    addInputs(parseInt(input.value, 10));
+  });
+
+
+  function addInputs(counter){
+    var edit = [];
+    var children = area.childNodes;
+
+    while(children.length) {
+      area.removeChild(children[0]);
+    }
+
+    (parseInt(input.value, 10) == 0) ? hr.style.display = "none" : hr.style.display = "block";
+
+    for (i=0; i < counter; i++) {
+      var html = Mustache.render(template, {
+                    "count": i+1});
+
+      var div = document.createElement("div");
+      div.classList.add("counts-names");
+      div.innerHTML = html;
+
+      var rem = div.querySelector(".counts-names__remove");
+
+      rem.addEventListener("tap", function(event){
+        event.preventDefault();
+        del = div.parentNode.removeChild(div);
+        input.value = area.children.length + " " + "чел";
+      });
+
+      edit.push(edit[i] = div);
+
+      area.appendChild(edit[i]);
+    }
+  };
+
 })();

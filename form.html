@@ -137,7 +137,7 @@
             </div>
             <hr>
             <div class="member-count__area">
-              <div class="counts-names">
+<!--               <div class="counts-names">
                 <div class="counts-names__count">
                   <div class="counts-names__descr">№</div>
                   <div class="counts-names__value">1</div>
@@ -186,7 +186,7 @@
                   </div>
                 </div>
                 <a class="counts-names__remove" href="#">Удалить</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -227,64 +227,7 @@
               <label for="photo-download">Загрузить фото</label>
             </div>
             <hr>
-            <div class="imgs__photo-wrap">
-<!--               <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-1.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-1.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div>
-              <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-2.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-2.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div>
-              <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-3.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-3.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div>
-              <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-4.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-4.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div>
-              <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-5.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-5.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div>
-              <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-6.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-6.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div>
-              <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-7.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-7.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div>
-              <div class="imgs__photo-item">
-                <figure class="photo">
-                  <img src="img/img-8.jpg" alt="#" width="68">
-                  <figcaption class="photo__title">IMG-8.JPG</figcaption>
-                </figure>
-                <button class="photo__close"></button>
-              </div> -->
-            </div>
+            <div class="imgs__photo-wrap"></div>
           </div>
         </div>
       </fieldset>
@@ -383,6 +326,31 @@
         <figcaption class="photo__title">{{name}}</figcaption>
       </figure>
       <button class="photo__close"></button>
+    </script>
+    <script id="people-template" type="text/html">
+      <div class="counts-names__count">
+        <div class="counts-names__descr">№</div>
+        <div class="counts-names__value">{{count}}</div>
+      </div>
+      <div class="counts-names__inform">
+        <div class="counts-names__group">
+          <div class="counts-names__descr">
+            <label for="count-name{{count}}">Имя: *</label>
+          </div>
+          <div class="counts-names__value">
+            <input class="counts-names__input" id="count-name2" name="count-name{{count}}" type="text" placeholder="Введите ваше имя" required>
+          </div>
+        </div>
+        <div class="counts-names__group">
+          <div class="counts-names__descr">
+            <label for="count-nickname{{count}}">Прозвище</label>
+          </div>
+          <div class="counts-names__value">
+            <input class="counts-names__input" id="count-nickname2" name="count-nickname{{count}}" type="text" placeholder="Ну как же без этого!">
+          </div>
+        </div>
+      </div>
+      <a class="counts-names__remove" href="#">Удалить</a>
     </script>
     <script src="bower_components/mustache.js/mustache.min.js"></script>
     <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
