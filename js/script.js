@@ -207,4 +207,53 @@
     }
   };
 
+})(),
+
+(function(){
+  var timeArea = document.querySelector(".member-date");
+  var timeInput = timeArea.querySelectorAll(".member-date__input");
+  var rangeInput = timeArea.querySelector(".range-control__input");
+  var changePlus = timeArea.querySelector(".range-control__plus");
+  var changeMinus = timeArea.querySelector(".range-control__minus");
+
+
+  for(i=0; i < timeInput.length; i++) {
+    var now = moment();
+    var date = moment().format("LL");
+    count = timeInput[i];
+    count.type = "text"
+    count.value = date.slice(0, -3);
+  }
+
+  var text = timeInput[0];
+
+  text.addEventListener("focus", function(){
+    text.type = "date";
+  });
+
+  text.addEventListener("blur", function(){
+    text.type = "text";
+    // if (el.value <= "invalid") el.value = "";
+    text.value = moment(text.value).format("LL").slice(0, -3);
+  });
+
+  window.onload = function(){
+    calc(text.value, parseInt(rangeInput.value, 10));
+  }
+
+  changePlus.addEventListener("tap", function(){
+    calc(text.value, parseInt(rangeInput.value, 10));
+  });
+
+  changeMinus.addEventListener("tap", function(){
+    calc(text.value, parseInt(rangeInput.value, 10));
+  });
+
+
+  function calc(data, operand){
+    // today = new Date();
+    // console.log(today.getDay());
+    console.log(operand, data);
+  }
+
 })();

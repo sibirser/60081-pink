@@ -108,7 +108,7 @@
           <div class="member-date__inner">
             <h4 class="member-date__title">Когда вы путешествовали? *</h4>
             <div class="member-date__area">
-              <input class="member-date__input" id="departure" name="departure" type="date" placeholder="1 апреля 2015" value="2015-04-01" required><br>
+              <input class="member-date__input" id="departure" name="departure" type="date" placeholder="1 апреля 2015" required><br>
               <label class="member-date__label" for="departure">Дата выезда</label><br>
             </div>
             <div class="member-date__area">
@@ -136,58 +136,7 @@
               <button class="range-control__plus">+</button>
             </div>
             <hr>
-            <div class="member-count__area">
-<!--               <div class="counts-names">
-                <div class="counts-names__count">
-                  <div class="counts-names__descr">№</div>
-                  <div class="counts-names__value">1</div>
-                </div>
-                <div class="counts-names__inform">
-                  <div class="counts-names__group">
-                    <div class="counts-names__descr">
-                      <label for="count-name">Имя: *</label>
-                    </div>
-                    <div class="counts-names__value">
-                      <input class="counts-names__input" id="count-name" name="count-name" type="text" placeholder="Введите ваше имя" required>
-                    </div>
-                  </div>
-                  <div class="counts-names__group">
-                    <div class="counts-names__descr">
-                      <label for="count-nickname">Прозвище</label>
-                    </div>
-                    <div class="counts-names__value">
-                      <input class="counts-names__input" id="count-nickname" name="count-nickname" type="text" placeholder="Ну как же без этого!">
-                    </div>
-                  </div>
-                </div>
-                <a class="counts-names__remove" href="#">Удалить</a>
-              </div>
-              <div class="counts-names">
-                <div class="counts-names__count">
-                  <div class="counts-names__descr">№</div>
-                  <div class="counts-names__value">2</div>
-                </div>
-                <div class="counts-names__inform">
-                  <div class="counts-names__group">
-                    <div class="counts-names__descr">
-                      <label for="count-name2">Имя: *</label>
-                    </div>
-                    <div class="counts-names__value">
-                      <input class="counts-names__input" id="count-name2" name="count-name2" type="text" placeholder="Введите ваше имя" required>
-                    </div>
-                  </div>
-                  <div class="counts-names__group">
-                    <div class="counts-names__descr">
-                      <label for="count-nickname2">Прозвище</label>
-                    </div>
-                    <div class="counts-names__value">
-                      <input class="counts-names__input" id="count-nickname2" name="count-nickname2" type="text" placeholder="Ну как же без этого!">
-                    </div>
-                  </div>
-                </div>
-                <a class="counts-names__remove" href="#">Удалить</a>
-              </div> -->
-            </div>
+            <div class="member-count__area"></div>
           </div>
         </div>
       </fieldset>
@@ -355,6 +304,10 @@
     <script src="bower_components/mustache.js/mustache.min.js"></script>
     <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
     <script src="bower_components/tap/dist/tap.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js">
+    </script>
+    <script src="bower_components/moment/locale/ru.js">
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
