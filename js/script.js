@@ -58,6 +58,9 @@
   var queue = [];
   var hr = document.querySelector(".photos hr");
   var template = document.querySelector("#image-template").innerHTML;
+  var popups = document.querySelectorAll(".popup");
+  var inputRequired = form.querySelectorAll("input[required]");
+  var popupsClose = document.querySelectorAll(".popup .btn--popup");
 
 
   form.querySelector("#photo-download").addEventListener("change", function(){
@@ -134,9 +137,31 @@
       if (xhr.readyState == 4) {
         fn(xhr.responseText);
       }
+
+      for (i=0; i < inputRequired.length; i++) {
+        var test = inputRequired[i];
+        // var close = popupsClose[i];
+        // var popup = popups[i];
+
+        ((xhr.status == 200) && (test !== "")) ? popups[0].style.display = "block" : popups[1].style.display = "block";
+      }
+
+      for (i=0; i < popupsClose.length; i++) {
+        closed(popupsClose[i], popups[i]);
+
+      }
+
+      function closed(close, popup){
+        close.addEventListener("tap", function(event){
+          event.preventDefault();
+          popup.style.display = "none";
+        });
+      };
+
     });
 
     xhr.send(data);
+
   }
 
 })(),
@@ -207,53 +232,53 @@
     }
   };
 
-})(),
-
-(function(){
-  // var timeArea = document.querySelector(".member-date");
-  // var timeInput = timeArea.querySelectorAll(".member-date__input");
-  // var rangeInput = timeArea.querySelector(".range-control__input");
-  // var rangePlus = timeArea.querySelector(".range-control__plus");
-  // var rangeMinus = timeArea.querySelector(".range-control__minus");
-
-
-  // for(i=0; i < timeInput.length; i++) {
-  //   var now = moment();
-  //   var date = moment().format("LL");
-  //   count = timeInput[i];
-  //   count.type = "text"
-  //   count.value = date.slice(0, -3);
-  // }
-
-  // var text = timeInput[0];
-
-  // text.addEventListener("focus", function(){
-  //   text.type = "date";
-  // });
-
-  // text.addEventListener("blur", function(){
-  //   text.type = "text";
-  //   // if (el.value <= "invalid") el.value = "";
-  //   text.value = moment(text.value).format("LL").slice(0, -3);
-  // });
-
-  // window.onload = function(){
-  //   calc(text.value, parseInt(rangeInput.value, 10));
-  // }
-
-  // rangePlus.addEventListener("tap", function(){
-  //   calc(text.value, parseInt(rangeInput.value, 10));
-  // });
-
-  // rangeMinus.addEventListener("tap", function(){
-  //   calc(text.value, parseInt(rangeInput.value, 10));
-  // });
-
-
-  // function calc(data, operand){
-  //   // today = new Date();
-  //   // console.log(today.getDay());
-  //   console.log(operand, data);
-  // }
-
 })();
+
+// // (function(){
+//   // var timeArea = document.querySelector(".member-date");
+//   // var timeInput = timeArea.querySelectorAll(".member-date__input");
+//   // var rangeInput = timeArea.querySelector(".range-control__input");
+//   // var rangePlus = timeArea.querySelector(".range-control__plus");
+//   // var rangeMinus = timeArea.querySelector(".range-control__minus");
+
+
+//   // for(i=0; i < timeInput.length; i++) {
+//   //   var now = moment();
+//   //   var date = moment().format("LL");
+//   //   count = timeInput[i];
+//   //   count.type = "text"
+//   //   count.value = date.slice(0, -3);
+//   // }
+
+//   // var text = timeInput[0];
+
+//   // text.addEventListener("focus", function(){
+//   //   text.type = "date";
+//   // });
+
+//   // text.addEventListener("blur", function(){
+//   //   text.type = "text";
+//   //   // if (el.value <= "invalid") el.value = "";
+//   //   text.value = moment(text.value).format("LL").slice(0, -3);
+//   // });
+
+//   // window.onload = function(){
+//   //   calc(text.value, parseInt(rangeInput.value, 10));
+//   // }
+
+//   // rangePlus.addEventListener("tap", function(){
+//   //   calc(text.value, parseInt(rangeInput.value, 10));
+//   // });
+
+//   // rangeMinus.addEventListener("tap", function(){
+//   //   calc(text.value, parseInt(rangeInput.value, 10));
+//   // });
+
+
+//   // function calc(data, operand){
+//   //   // today = new Date();
+//   //   // console.log(today.getDay());
+//   //   console.log(operand, data);
+//   // }
+
+// // })();

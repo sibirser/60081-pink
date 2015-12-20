@@ -68,7 +68,7 @@
               </li>
             </ul>
           </nav>
-          <a class="header-top__toggle  header-top__toggle--active" href="#"><span></span></a>
+          <a class="header-top__toggle" href="#"><span></span></a>
         </div>
       </div>
       <div class="header-bottom">
@@ -392,5 +392,24 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="bower_components/tap/dist/tap.min.js"></script>
+    <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script>
+      var map = new google.maps.Map(document.querySelector('.map-area'), {
+        zoom: 15,
+        center: new google.maps.LatLng(59.9388936, 30.3231584),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(59.9388936, 30.3231584),
+      map: map,
+      title: 'My place',
+      clickable: false,
+      icon: '../img/map-marker.svg'
+      });
+    </script>
   </body>
 </html>
