@@ -116,7 +116,7 @@ module.exports = function(grunt) {
       },
       watch: {
         style: {
-          files: ["less/**/*.less"],
+          files: ["source/less/**/*.less"],
           tasks: ["less", "postcss"],
           options: {
             spawn: false,
