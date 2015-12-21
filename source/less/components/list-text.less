@@ -1,0 +1,44 @@
+/*List text*/
+
+.list-text {
+  padding-left:     20px;
+  margin-bottom:    30px;
+
+  list-style-type:  none;
+
+  @media(min-width: 700px) { margin-bottom:  57px; }
+
+  @media(min-width: 1200px) { padding:  0  80px; }
+
+  &__item {
+    position:       relative;
+
+    margin-bottom:  34px;
+
+    line-height:    1.43;
+
+    @media(min-width: 700px) {
+      margin-bottom: 30px;
+      padding-left: 15px;
+
+      font-size: @text-size-2;
+      line-height: @headings-line-height;
+    }
+
+    &:before { 
+      position:      absolute;
+      left:          -.8em;
+      top:           -.3em;
+
+      content:       "\2022";
+      margin-right:  5px;
+
+      font-size:     28px;
+      color:         @purple;
+    }
+
+    &:last-of-type {
+      margin-bottom:  0;
+    }
+  }
+}

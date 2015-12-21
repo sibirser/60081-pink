@@ -1,0 +1,60 @@
+/* scaffolding */
+html,
+body {
+  margin:   0;
+  padding:  0;
+}
+
+html {
+  box-sizing:  border-box;
+
+  font-size:   @font-size-base;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing:  inherit;
+}
+
+.clearfix() {
+  &:after {
+    content:  '';
+    display:  table;
+    clear:    both;
+  }
+}
+
+body {
+  font-family:  @font-family;
+  font-size:    @font-size;
+  line-height:  @line-height;
+  color:        @text-color;
+  background:   @body-bg;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family:  inherit;
+  font-size:    inherit;
+  line-height:  inherit;
+}
+
+a {
+  color:  @link-color;
+
+  &:hover {
+
+  }
+}
+
+figure {
+  margin:   0;
+  padding:  0;
+}
+
+img {
+  vertical-align:  middle;
+}
