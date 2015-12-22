@@ -1,0 +1,120 @@
+/*Pagination*/
+
+.pagination {
+  margin-bottom:  50px;
+
+  @media(min-width: 700px) { margin-bottom:  80px; }
+  @media(min-width: 1200px) { margin-bottom:  102px; }
+
+  &__center-wrap {
+    .center-wrap();
+  }
+
+  &__list {
+    position: relative; 
+
+    display:          flex;
+    justify-content:  flex-start;
+    flex-wrap:        wrap;
+    padding:     0;
+    margin:      0;
+
+    list-style:  none;
+
+    @media(min-width: 700px) { padding: 0  60px }
+
+    &:before {
+
+      @media(min-width: 700px) {
+        position: absolute;
+        left: 0;
+        top: 45%;
+
+        content: 'стр.';
+        margin-top:  -@text-size-2*@headings-line-height/2;
+        font-family:  @font-family--bold;
+        text-transform: uppercase;
+        font-size:  @text-size-2;
+        line-height:  @headings-line-height;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom:    10px;
+    min-width:        62px;
+    height:           62px;
+    margin-right:     12px;
+
+    @media(min-width: 320px) and (max-width: 700px) { margin-right:  10px; }
+
+    &:last-of-type { margin-right:  0; }
+
+    &.active {
+
+      & .pagination__link { border-color:  @purple; }
+      }
+  }
+
+  &__link {
+    display:          block;
+    padding:          10px  15px;
+
+    font-family:      @font-family--bold;
+    font-weight:      bold;
+    font-size:        @text-size-2;
+    line-height:      40px;
+    text-align:       center;
+    text-decoration:  none;
+    color:            @blue;
+
+    border:           2px  solid  @gray-90;
+    border-radius:    2px;
+  }
+
+  &--nav {
+    padding-top:    5px;
+    margin-bottom:  60px;
+
+    text-align:     center;
+
+    @media(min-width: 700px) {margin-bottom:  47px;}
+    @media(min-width: 1200px) { margin-bottom:  63px; }
+
+    & .pagination__list {
+      padding: 0;
+      justify-content:  space-between;
+
+      @media(min-width: 1200px) { padding:  0  60px }
+
+      &:before { display:  none; }
+    }
+
+
+    & .pagination__link { text-transform:  uppercase; }
+
+    & .pagination__item {
+      margin-right:   0;
+      margin-bottom:  20px;
+      min-width:      131px;
+
+      @media(min-width: 700px) { min-width:  140px; }
+      @media(min-width: 1200px) { min-width:  260px; }
+
+      &:last-of-type {
+        margin-right:  0;
+        width: 100%;
+        @media(min-width: 700px) { width:  300px; }
+        @media(min-width: 1200px) { width:  276px; }
+      }
+
+      &:nth-of-type(2) {
+        @media(min-width: 700px) { order:  1; }
+      }
+
+      &:last-of-type {
+        margin-bottom:  0;
+      }
+    }
+  }
+}

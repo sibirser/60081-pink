@@ -1,0 +1,201 @@
+/*Price table*/
+
+.price-table {
+  width:            840px;
+
+  border-collapse:  collapse;
+
+  @media(min-width: 700px) {
+    width:      100%;
+    max-width:  940px;
+
+    &__row {
+
+      &:before {
+        display:           table-cell;
+        width:             155px;
+        padding-left:      16px;
+
+        font-size:         14px;
+        line-height:       40px;
+
+        border:            2px  @table-border-style  @table-border-color;
+        background-color:  @table-cell-bg;
+
+        @media(min-width: 1200px) {
+          padding-left:    20px;
+          padding-top:     15px;
+          padding-bottom:  14px;
+
+          font-size:       @text-size-2;
+          line-height:     @headings-line-height;
+        }
+      }
+
+      &:nth-of-type(1) {
+
+        &:before {
+          content:           '';
+
+          border:            none;
+          background-color:  transparent;
+        }
+      }
+
+      &:nth-of-type(2) {
+
+        &:before {
+          content:  'Розовый фильтр';
+          word-break:        break-word;
+        }
+      }
+
+      &:nth-of-type(3) {
+        &:before {
+          content:  'Смайлики';
+          word-break:        break-word;
+        }
+      }
+
+      &:nth-of-type(4) {
+        &:before {
+          content:  'Комментарии';
+          word-break:        break-word;
+        }
+      }
+    }
+  }
+
+  &__row:first-of-type {
+
+    & .price-table__cell {
+      padding:           0  20px;
+      padding-top:       18px;
+      padding-bottom:    19px;
+
+      border-top:        none;
+      border-bottom:     none;
+      background-color:  @table-head-bg;
+
+      @media(min-width: 700px) {
+        padding-top:     12px;
+        padding-bottom:  10px;
+      }
+      @media(min-width: 1200px) {
+        padding-top:     17px;
+        padding-bottom:  20px;
+      }
+    }
+  }
+
+  &__row:nth-of-type(2) {
+
+    & .price-table__cell {
+      height:       60px;
+      border-top:   none;
+
+      @media(min-width: 720px) { height:  46px; }
+    }
+  }
+
+  &__cell {
+    position:          relative;
+
+    width:             280px;
+    height:            61px;
+    padding-left:      22px;
+
+    word-break:        break-word;
+    line-height:       @line-height--big;
+    text-transform:    uppercase;
+
+    border:            2px  @table-border-style  @table-border-color;
+    background-color:  @table-cell-bg;
+
+    overflow:          hidden;
+
+    @media(min-width: 700px) {
+      height:     47px;
+      width:      155px;
+      font-size:  0;
+    }
+
+    &--hit {
+
+      &:before {
+        position:          absolute;
+        left:              -27px;
+        top:               12px;
+
+        content:           'Хит';
+        display:           block;
+        width:             100px;
+        height:            30px;
+
+        font-family:       @font-family;
+        font-size:         14px;
+        font-weight:       800;
+        text-align:        center;
+        line-height:       30px;
+        color:             #fff;
+
+        background-color:  @purple;
+
+        transform:         rotate(-45deg);
+
+        @media(min-width: 700px) {
+          left:  -28px;
+          top:   4px;
+        }
+
+        @media(min-width: 1200px) {
+          left:  -26px;
+          top:   10px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom:   0;
+    margin-top:      0;
+
+    font-family:     @font-family--bold;
+    font-weight:     bold;
+    font-size:       @font-size--h3;
+    line-height:     @headings-line-height;
+    color:           @table-head-color;
+    text-align:      center;
+    text-transform:  uppercase;
+
+    @media(min-width: 700px) { 
+      font-size:    @text-size-1;
+      line-height:  1.775;
+    }
+
+    @media(min-width: 1200px) {
+      font-size:    @text-size-2;
+      line-height:  @headings-line-height;
+    }
+  }
+
+  &__price {
+    font-family:     @font-family--light;
+    font-size:       @text-size-5;
+    line-height:     @line-height--mid;
+    color:           @table-head-color;
+    text-align:      center;
+    text-transform:  uppercase;
+
+    @media(min-width: 700px) { 
+      font-size:    @text-size-2;
+      line-height:  @headings-line-height;
+    }
+
+    @media(min-width: 1200px) { 
+      font-size:    @text-size-5;
+      line-height:  @line-height--mid;
+    }
+  }
+}
+
