@@ -5,24 +5,27 @@
 
   &__list {
     position:    absolute;
-    left:        -280px;
+    left:        50%;
     top:         48px;
     z-index:     50;
 
     display:      none;
     margin:       0;
     padding:      0;
-    margin-left:  -20px;
+    margin-left:  -37px;
 
-    list-style:  none;
+    list-style:   none;
 
+    transform:    translateX(-50%);
 
     &--active { display:  block; }
 
     @media(min-width: 700px) {
       top:            65px;
-      left:           -620px;
-      margin-left:    -40px;
+      left:           50%;
+      margin-left:    -73px;
+
+      transform:      translateX(-50%);
 
     }
 
@@ -33,6 +36,9 @@
       width:            500px;
       justify-content:  space-between;
       flex-wrap:        wrap;
+      margin:           0;
+
+      transform:        translate(0);
     }
   }
 
