@@ -1,0 +1,50 @@
+/*Promo news*/
+
+.promo-news {
+  padding-top:  25px;
+  min-width:    310px;
+  flex-basis:   310px;
+
+  @media(min-width: 1200px) {
+    min-width:     610px;
+    flex-basis:    610px;
+    padding-left:  36px;
+    padding-top:   74px;
+  }
+
+  &__title {
+    font-family:  @font-family--bold;
+    font-weight:  bold;
+    font-size:    @font-size--h1;
+    line-height:  @line-height--auto;
+    color:        #000;
+
+    @media(min-width: 700px) { margin-bottom:  8px; }
+    @media(min-width: 1200px) { margin-bottom:  21px; }
+
+    br {
+      @media(min-width: 1200px) {
+        display:  none;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom:  12px;
+
+    @media(min-width: 1200px) {
+      margin-bottom:  32px;
+
+      font-size:      @text-size-2;
+      line-height:    @headings-line-height;
+    }
+  }
+
+  & .link {
+
+    @media(min-width: 1200px) {
+      font-size:    @text-size-2;
+      line-height:  @headings-line-height;
+    }
+  }
+}

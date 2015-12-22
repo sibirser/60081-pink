@@ -1,0 +1,37 @@
+/*Blogs*/
+
+.blogs {
+  padding-top:    1px;
+  margin-bottom:  50px;
+
+  @media(min-width: 700px) { padding-top:  14px;}
+  @media(min-width: 1200px) {
+    margin-bottom:  90px;
+    padding-top:    5px;
+  }
+
+  &__center-wrap {
+    .center-wrap();
+  }
+
+  & .blog {
+
+    @media(min-width: 700px) {
+      padding:        0  60px;
+      margin-bottom:  45px;
+    }
+    @media(min-width: 1200px) {
+      margin-bottom:  51px;
+    }
+
+    &:nth-of-type(3) {
+
+      @media(min-width: 700px) { margin-bottom:  59px; }
+    }
+
+    &:last-of-type {
+
+      @media(min-width: 700px) { margin-bottom:  58px; }
+    }
+  }
+}

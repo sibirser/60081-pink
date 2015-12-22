@@ -1,0 +1,58 @@
+/*Developed*/
+
+.developed {
+  width:         145px;
+  margin:        0  auto;
+  padding-left:  6px;
+
+  @media(min-width: 700px) {
+    width:        135px;
+    margin:       0;
+    padding-top:  14px;
+  }
+
+  @media(min-width: 1200px) { width:  161px; }
+
+  &__link {
+    position:         relative;
+
+    display:          block;
+
+    text-decoration:  none;
+    color:            @blue;
+    line-height:      @line-height--mid;
+
+    @media(min-width: 1200px) {
+      font-size:    18px;
+      line-height:  1;
+    }
+  }
+
+  &__img {
+    position:     absolute;
+    left:   97px;
+    top:    -6px;
+
+    width:        27px;
+    height:       34px;
+    margin-left:  5px;
+
+    @media(min-width: 700px) { left: 93px; }
+    @media(min-width: 1200px) { left: 119px; }
+
+    &:hover {
+      path {
+        fill:  @blue;
+      }
+    }
+
+    &:active {
+      path {
+        fill:     @blue;
+        opacity:  .3;
+      }
+    }
+
+  @media(min-width: 700px) { margin-left:  10px; }
+  }
+}

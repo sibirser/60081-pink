@@ -1,0 +1,21 @@
+/*Reviews*/
+
+.reviews {
+
+  @media(min-width: 700px) { padding-bottom:  100px; }
+  @media(min-width: 1200px) { margin-bottom:  25px; }
+
+  &__center-wrap {
+    .center-wrap();
+  }
+
+  & .slider {
+    min-height: 290px;
+
+    @media(min-width: 700px) {
+      min-height:     235px;
+      margin-bottom:  10px;
+    }
+    @media(min-width: 1200px) { min-height:  320px; }
+  }
+}

@@ -1,0 +1,140 @@
+/*Blog post*/
+
+.blog-post {
+
+  @media(min-width: 700px) { margin-bottom:  50px; }
+
+  &__center-wrap {
+    .center-wrap();
+  }
+
+  & .blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:  15px;
+
+    text-align:     center;
+
+    @media(min-width: 700px) { margin-bottom:  17px;}
+    @media(min-width: 1200px) { padding:  0  60px; }
+  }
+
+  & .blog__title {
+    display: block;
+    margin-bottom:  20px;
+
+    line-height:    @line-height--auto;
+
+    @media(min-width: 700px) {
+      margin-bottom:  23px;
+      font-size:      50px;
+    }
+  }
+
+  & .blog__text {
+    display:        block;
+    margin-bottom:  20px;
+    font-size:      @text-size-1;
+    line-height:    1.69;
+
+    @media(min-width: 700px) {
+      margin-bottom:  13px;
+      font-size:      @text-size-5;
+      line-height:    @headings-line-height;
+    }
+  }
+
+  & .blog__pubdate {
+    width: 100%;
+
+    @media(min-width: 700px) {
+      position: relative;
+      z-index: 50;
+
+      order: 1;
+
+      font-size:    @font-size;
+      line-height:  @line-height--big;
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        z-index: -2;
+
+        content: '';
+        display: block;
+        width: 100%;
+        border: 1px dashed @gray-90;
+      }
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+
+        content: '';
+        display: block;
+        width: 300px;
+        height: 30px;
+
+        background-color: #fff;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom:   20px;
+
+    font-family:     @font-family--bold;
+    font-weight:     bold;
+    text-transform:  uppercase;
+
+    @media(min-width: 700px) {
+      margin-bottom: 23px;
+
+      font-size: @font-size--h2;
+      line-height: @line-height--mid;
+    }
+
+    @media(min-width: 1200px) { padding:  0  60px; }
+  }
+
+  &__text {
+    margin-bottom:   30px;
+
+    line-height:     1.93;
+    letter-spacing:  -.01px;
+
+    @media(min-width: 700px) {
+      margin-bottom: 30px;
+
+      font-size: @text-size-2;
+      line-height: @headings-line-height;
+      letter-spacing: normal;
+    }
+
+    @media(min-width: 1200px) { padding:  0  60px; }
+
+    &:nth-of-type(1) {
+
+      @media(min-width: 700px) { margin-bottom:  56px; }
+    }
+
+    &:last-of-type {
+
+      @media(min-width: 700px) { margin-bottom:  0; }
+    }
+  }
+
+  &__hiphens {
+
+    @media(min-width: 700px) {
+      display:  none;
+    }
+  }
+}
+

@@ -1,0 +1,24 @@
+/*Link*/
+
+.link {
+
+  &:link {
+    color: @purple;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color:  fade(@blue, 30%);
+    text-decoration: none;
+  }
+
+  &:hover {
+    color:  @blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color:  fade(@blue, 30%);
+    text-decoration: none;
+  }
+}
