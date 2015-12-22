@@ -4,7 +4,7 @@
   margin-bottom:  50px;
 
   @media(min-width: 700px) { margin-bottom:  80px; }
-  @media(min-width: 700px) { margin-bottom:  102px; }
+  @media(min-width: 1200px) { margin-bottom:  102px; }
 
   &__center-wrap {
     .center-wrap();
@@ -28,7 +28,7 @@
       @media(min-width: 700px) {
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 45%;
 
         content: 'стр.';
         margin-top:  -@text-size-2*@headings-line-height/2;
@@ -44,7 +44,9 @@
     margin-bottom:    10px;
     min-width:        62px;
     height:           62px;
-    margin-right:     10px;
+    margin-right:     12px;
+
+    @media(min-width: 320px) and (max-width: 700px) { margin-right:  10px; }
 
     &:last-of-type { margin-right:  0; }
 
@@ -82,6 +84,8 @@
     & .pagination__list {
       padding: 0;
       justify-content:  space-between;
+
+      @media(min-width: 1200px) { padding:  0  60px }
 
       &:before { display:  none; }
     }
