@@ -28,6 +28,36 @@ module.exports = function(grunt) {
             src: "*/**",
             dest: "source/js/vendors"
           }]
+        },
+        moment: {
+          files: [{
+            expand: true,
+            cwd: "source/js/vendors/moment/min",
+            src: "moment.min.js",
+            dest: "build/js"
+          },
+          {
+            expand: true,
+            cwd: "source/js/vendors/moment/min",
+            src: "locales.min.js",
+            dest: "build/js"
+          }]
+        },
+        mustache: {
+          files: [{
+            expand: true,
+            cwd: "source/js/vendors/mustache.js",
+            src: "mustache.min.js",
+            dest: "build/js"
+          }]
+        },
+        tap: {
+          files: [{
+            expand: true,
+            cwd: "source/js/vendors/tap/dist",
+            src: "tap.min.js",
+            dest: "build/js"
+          }]
         }
       },
       less: {
@@ -63,11 +93,8 @@ module.exports = function(grunt) {
           separator: ';',
         },
         dist: {
-          src: ['source/js/vendors/moment/min/moment.min.js',
-                'source/js/vendors/moment/min/locales.min.js',
-                'source/js/vendors/mustache.js/mustache.min.js',
-                'source/js/vendors/picturefill/dist/picturefill.min.js',
-                'source/js/vendors/tap/dist/tap.min.js',
+          src: ['source/js/vendors/picturefill/dist/picturefill.js',
+                'source/js/vendors/tap/dist/tap.js',
                 'source/js/main.js'],
           dest: 'build/js/main.js',
         },
@@ -92,7 +119,7 @@ module.exports = function(grunt) {
       },
       uglify: {
         options: {
-          mangle: false
+          mangle: false,
         },
         my_target: {
           files: {
@@ -104,7 +131,7 @@ module.exports = function(grunt) {
         dist: {
           options: {
             removeComments: false,
-            collapseWhitespace: true
+            collapseWhitespace: false
           },
           files: {
             'build/index.html': 'source/index.html',
@@ -117,7 +144,7 @@ module.exports = function(grunt) {
       watch: {
         style: {
           files: ["source/less/**/*.less"],
-          tasks: ["less", "postcss"],
+          tasks: ["build"],
           options: {
             spawn: false,
             livereload: true

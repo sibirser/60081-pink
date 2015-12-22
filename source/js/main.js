@@ -54,32 +54,33 @@
   }
 
   var form = document.querySelector(".member-form");
-  var area = form.querySelector(".imgs__photo-wrap");
+  if(form != null) var area = form.querySelector(".imgs__photo-wrap");
   var queue = [];
   var hr = document.querySelector(".photos hr");
-  var template = document.querySelector("#image-template").innerHTML;
+  var template = document.querySelector("#image-template");
   var popups = document.querySelectorAll(".popup");
-  var inputRequired = form.querySelectorAll("input[required]");
+  if(form) var inputRequired = form.querySelectorAll("input[required]");
   var popupsClose = document.querySelectorAll(".popup .btn--popup");
 
+  if(form != null) {
+    form.querySelector("#photo-download").addEventListener("change", function(){
 
-  form.querySelector("#photo-download").addEventListener("change", function(){
+      var files = this.files;
 
-    var files = this.files;
+      for (var i =0; i < files.length; i++) {
+        preview(files[i]);
+      }
+      this.value = "";
 
-    for (var i =0; i < files.length; i++) {
-      preview(files[i]);
-    }
-    this.value = "";
-
-  });
+    });
+  }
 
   function preview(file) {
     if (file.type.match(/image.*/)) {
       var reader = new FileReader();
 
       reader.addEventListener("load", function(event){
-        var html = Mustache.render(template, {
+        var html = Mustache.render(template.innerHTML, {
                 "image": event.target.result,
                 "name": file.name
               });
@@ -114,19 +115,21 @@
     if (queue.length == 0) hr.style.display = "none";
   }
 
-  form.addEventListener("submit", function(event){
-    event.preventDefault();
+  if(form != null) {
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
 
-    var data = new FormData(form);
+      var data = new FormData(form);
 
-    queue.forEach(function(element){
-      data.append("images", element.file);
+      queue.forEach(function(element){
+        data.append("images", element.file);
+      });
+
+      request(data, function(response){
+        console.log(response);
+      });
     });
-
-    request(data, function(response){
-      console.log(response);
-    });
-  });
+  }
 
   function request(data, fn){
     var xhr = new XMLHttpRequest;
@@ -180,24 +183,32 @@
 
 (function(){
   var form = document.querySelector(".member-form");
-  var area = form.querySelector(".member-count__area");
+  if(form != null) var area = form.querySelector(".member-count__area");
   var hr = document.querySelector(".member-count hr");
-  var template = document.querySelector("#people-template").innerHTML;
+  var template2 = document.querySelector("#people-template");
   var input = document.querySelector(".member-count .range-control__input");
   var changePlus = document.querySelector(".member-count .range-control__plus");
   var changeMinus = document.querySelector(".member-count .range-control__minus");
 
   window.onload = function(){
-    addInputs(parseInt(input.value, 10));
+    if(input || (input != null)) {
+      addInputs(parseInt(input.value, 10));
+    }
   }
 
-  changePlus.addEventListener("tap", function(){
-    addInputs(parseInt(input.value, 10));
-  });
+  if(changePlus && changeMinus) {
+    changePlus.addEventListener("tap", function(){
+      if(input || (input != null)) {
+        addInputs(parseInt(input.value, 10));
+      }
+    });
 
-  changeMinus.addEventListener("tap", function(){
-    addInputs(parseInt(input.value, 10));
+    changeMinus.addEventListener("tap", function(){
+      if(input || (input != null)) {
+        addInputs(parseInt(input.value, 10));
+      }
   });
+  }
 
 
   function addInputs(counter){
@@ -211,7 +222,7 @@
     (parseInt(input.value, 10) == 0) ? hr.style.display = "none" : hr.style.display = "block";
 
     for (i=0; i < counter; i++) {
-      var html = Mustache.render(template, {
+      var html = Mustache.render(template2.innerHTML, {
                     "count": i+1});
 
       var div = document.createElement("div");
@@ -234,51 +245,51 @@
 
 })();
 
-// // (function(){
-//   // var timeArea = document.querySelector(".member-date");
-//   // var timeInput = timeArea.querySelectorAll(".member-date__input");
-//   // var rangeInput = timeArea.querySelector(".range-control__input");
-//   // var rangePlus = timeArea.querySelector(".range-control__plus");
-//   // var rangeMinus = timeArea.querySelector(".range-control__minus");
+// (function(){
+  // var timeArea = document.querySelector(".member-date");
+  // var timeInput = timeArea.querySelectorAll(".member-date__input");
+  // var rangeInput = timeArea.querySelector(".range-control__input");
+  // var rangePlus = timeArea.querySelector(".range-control__plus");
+  // var rangeMinus = timeArea.querySelector(".range-control__minus");
 
 
-//   // for(i=0; i < timeInput.length; i++) {
-//   //   var now = moment();
-//   //   var date = moment().format("LL");
-//   //   count = timeInput[i];
-//   //   count.type = "text"
-//   //   count.value = date.slice(0, -3);
-//   // }
+  // for(i=0; i < timeInput.length; i++) {
+  //   var now = moment();
+  //   var date = moment().format("LL");
+  //   count = timeInput[i];
+  //   count.type = "text"
+  //   count.value = date.slice(0, -3);
+  // }
 
-//   // var text = timeInput[0];
+  // var text = timeInput[0];
 
-//   // text.addEventListener("focus", function(){
-//   //   text.type = "date";
-//   // });
+  // text.addEventListener("focus", function(){
+  //   text.type = "date";
+  // });
 
-//   // text.addEventListener("blur", function(){
-//   //   text.type = "text";
-//   //   // if (el.value <= "invalid") el.value = "";
-//   //   text.value = moment(text.value).format("LL").slice(0, -3);
-//   // });
+  // text.addEventListener("blur", function(){
+  //   text.type = "text";
+  //   // if (el.value <= "invalid") el.value = "";
+  //   text.value = moment(text.value).format("LL").slice(0, -3);
+  // });
 
-//   // window.onload = function(){
-//   //   calc(text.value, parseInt(rangeInput.value, 10));
-//   // }
+  // window.onload = function(){
+  //   calc(text.value, parseInt(rangeInput.value, 10));
+  // }
 
-//   // rangePlus.addEventListener("tap", function(){
-//   //   calc(text.value, parseInt(rangeInput.value, 10));
-//   // });
+  // rangePlus.addEventListener("tap", function(){
+  //   calc(text.value, parseInt(rangeInput.value, 10));
+  // });
 
-//   // rangeMinus.addEventListener("tap", function(){
-//   //   calc(text.value, parseInt(rangeInput.value, 10));
-//   // });
+  // rangeMinus.addEventListener("tap", function(){
+  //   calc(text.value, parseInt(rangeInput.value, 10));
+  // });
 
 
-//   // function calc(data, operand){
-//   //   // today = new Date();
-//   //   // console.log(today.getDay());
-//   //   console.log(operand, data);
-//   // }
+  // function calc(data, operand){
+  //   // today = new Date();
+  //   // console.log(today.getDay());
+  //   console.log(operand, data);
+  // }
 
-// // })();
+// })();
