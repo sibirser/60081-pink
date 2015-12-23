@@ -1,6 +1,6 @@
 /*Btns*/
 
-.green-hover() {
+.blue-hover() {
 
   &:link {
     color:         @btn-color--photo;
@@ -15,6 +15,25 @@
     color:             #fff;
 
     background-color:  @btn-bdr-color--photo-hover;
+  }
+}
+
+.green-hover() {
+
+  &:link {
+    color:              #fff;
+
+    background-color:   @green;
+    border-color:       @green;
+  }
+
+  &:hover {
+    border-color:      #1c9b5e;
+    background-color:  #1c9b5e;
+  }
+
+  &:active {
+    color:             fade(@white, 30%);
   }
 }
 
@@ -91,7 +110,7 @@
       margin-bottom:  33px;
     }
 
-    .green-hover();
+  .blue-hover()
   }
 
   &--submit {
@@ -111,21 +130,7 @@
       width:  300px;
     }
 
-    &:link {
-      color:              #fff;
-
-      background-color:   @green;
-      border-color:       @green;
-    }
-
-    &:hover {
-      border-color:      #1c9b5e;
-      background-color:  #1c9b5e;
-    }
-
-    &:active {
-      color:             fade(@white, 30%);
-    }
+    .green-hover()
   }
 
   &--popup {
@@ -142,7 +147,7 @@
 
     @media(min-width: 700px) { width:  100%; }
 
-    .green-hover();
+    .green-hover()
   }
 
   &:disabled,
