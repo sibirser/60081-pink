@@ -61,6 +61,7 @@
   var popups = document.querySelectorAll(".popup");
   if(form) var inputRequired = form.querySelectorAll("input[required]");
   var popupsClose = document.querySelectorAll(".popup .btn--popup");
+  var body = document.body;
 
   if(form != null) {
     form.querySelector("#photo-download").addEventListener("change", function(){
@@ -146,7 +147,13 @@
         // var close = popupsClose[i];
         // var popup = popups[i];
 
-        ((xhr.status == 200) && (test !== "")) ? popups[0].style.display = "block" : popups[1].style.display = "block";
+        if ((xhr.status == 200) && (test !== "")) {
+          popups[0].style.display = "block";
+          body.classList.add("veil");
+        } else {
+          popups[1].style.display = "block";
+          body.classList.add("veil");
+        }
       }
 
       for (i=0; i < popupsClose.length; i++) {
@@ -158,8 +165,19 @@
         close.addEventListener("tap", function(event){
           event.preventDefault();
           popup.style.display = "none";
+          body.classList.remove("veil");
         });
       };
+
+
+      window.addEventListener("keydown", function(event){
+        if (event.keyCode == 27) {
+          for(i=0; i < popups.length; i ++) {
+            popups[i].style.display = "none";
+            body.classList.remove("veil");
+          }
+        }
+      });
 
     });
 
